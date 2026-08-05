@@ -1,1 +1,16 @@
-<Solution />
+<Solution>
+  <Folder Name="/ShopManagement/" />
+  <Folder Name="/ShopManagement/SM.Application/">
+    <Project Path="ShopManagement.Application.Contracts/ShopManagement.Application.Contracts.csproj" />
+    <Project Path="ShopManagement.Application/ShopManagement.Application.csproj" Id="27e9caaf-f202-4ebc-b025-e3f04706bbb8" />
+  </Folder>
+  <Folder Name="/ShopManagement/SM.Domain/">
+    <Project Path="ShopManagement.Domain/ShopManagement.Domain.csproj" />
+  </Folder>
+  <Folder Name="/ShopManagement/SM.Infrastructure/">
+    <Project Path="ShopManagement.Configuration/ShopManagement.Configuration.csproj" Id="1ee81811-20c5-4a65-bd2b-56f6b461e025" />
+    <Project Path="ShopManagement.Infrastructure.EFCore/ShopManagement.Infrastructure.EFCore.csproj" Id="58fca83b-deba-4eb4-8ddc-29a5f8f55d3c" />
+  </Folder>
+  <Project Path="0_Framework/0_Framework.csproj" />
+  <Project Path="ServiceHost/ServiceHost.csproj" Id="7561937e-9b49-4140-9a8e-b7845526513d" />
+</Solution>

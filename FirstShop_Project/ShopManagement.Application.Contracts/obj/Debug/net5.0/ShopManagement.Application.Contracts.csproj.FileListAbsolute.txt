@@ -1,0 +1,16 @@
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.deps.json
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\bin\Debug\net5.0\ShopManagement.Application.Contracts.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\bin\Debug\net5.0\0_Framework.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\bin\Debug\net5.0\0_Framework.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.csproj.AssemblyReference.cache
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.AssemblyInfoInputs.cache
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.AssemblyInfo.cs
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.csproj.CoreCompileInputs.cache
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.sourcelink.json
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopMana.6F35FA60.Up2Date
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\refint\ShopManagement.Application.Contracts.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ref\ShopManagement.Application.Contracts.dll
