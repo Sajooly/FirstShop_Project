@@ -1,5 +1,7 @@
 ﻿using _0_Framework.Domain;
 using ShopManagement.Domain.ProductCategoryAgg;
+using ShopManagement.Domain.ProductPictureAgg;
+using System.Collections.Generic;
 
 namespace ShopManagement.Domain.ProductAgg
 {
@@ -23,6 +25,7 @@ namespace ShopManagement.Domain.ProductAgg
         //Navigation Property For Realation
         public int CategoryId { get; private set; }
         public ProductCategory Category { get; private set; }
+        public List<ProductPicture> ProductPictures { get; private set; }
 
         public Product(string name, string code, double unitPrice, string shortDescription, string description,
             string picture, string pictureAlt, string pictureTitle, string keywords, string metaDescription, string slug, int categoryId)

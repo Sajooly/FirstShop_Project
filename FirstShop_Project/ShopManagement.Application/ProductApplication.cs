@@ -66,6 +66,11 @@ namespace ShopManagement.Application
             return _productRepository.GetDetails(id);
         }
 
+        public List<ProductViewModel> GetProductsName()
+        {
+            return _productRepository.GetProductsName();
+        }
+
         public OperationResult RemoveInStore(int id)
         {
             var operation = new OperationResult();

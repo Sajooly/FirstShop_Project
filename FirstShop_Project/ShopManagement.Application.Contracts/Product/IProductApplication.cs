@@ -11,5 +11,6 @@ namespace ShopManagement.Application.Contracts.Product
         List<ProductViewModel> Search(ProductSearchModel searchModel);
         OperationResult AddInStore(int id);
         OperationResult RemoveInStore(int id);
+        List<ProductViewModel> GetProductsName();
     }
 }
