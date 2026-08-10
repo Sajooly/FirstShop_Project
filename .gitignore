@@ -1,1 +1,3 @@
 FirstShop_Project/.vs/
+**/bin/
+**/obj/
