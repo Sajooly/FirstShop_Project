@@ -47,9 +47,9 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPictures
         }
         public IActionResult OnGetEdit(int id)
         {
-            var product = _productPictureApplication.GetDetails(id);
-            product.Products = _productApplication.GetProductsName();
-            return Partial("Edit", product);
+            var productPicture = _productPictureApplication.GetDetails(id);
+            productPicture.Products = _productApplication.GetProductsName();
+            return Partial("Edit", productPicture);
         }
         public JsonResult OnPostEdit(EditProductPicture command)
         {
