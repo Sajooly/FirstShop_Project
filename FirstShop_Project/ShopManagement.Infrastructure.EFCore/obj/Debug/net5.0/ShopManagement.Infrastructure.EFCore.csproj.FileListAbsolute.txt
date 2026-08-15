@@ -14,7 +14,6 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Infrastruct
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.AssemblyInfoInputs.cache
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.AssemblyInfo.cs
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.csproj.CoreCompileInputs.cache
-H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.sourcelink.json
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopMana.6B4874FD.Up2Date
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.dll
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\refint\ShopManagement.Infrastructure.EFCore.dll

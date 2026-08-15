@@ -11,6 +11,7 @@
     <Project Path="ShopManagement.Configuration/ShopManagement.Configuration.csproj" Id="1ee81811-20c5-4a65-bd2b-56f6b461e025" />
     <Project Path="ShopManagement.Infrastructure.EFCore/ShopManagement.Infrastructure.EFCore.csproj" Id="58fca83b-deba-4eb4-8ddc-29a5f8f55d3c" />
   </Folder>
+  <Project Path="01_ShopQuery/01_ShopQuery.csproj" Id="4bf4472f-9fe2-40c9-ad3f-4a79d72e9620" />
   <Project Path="0_Framework/0_Framework.csproj" />
   <Project Path="ServiceHost/ServiceHost.csproj" Id="7561937e-9b49-4140-9a8e-b7845526513d" />
 </Solution>

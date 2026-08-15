@@ -6,7 +6,6 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\0_Framework\obj\Debug\net5
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\0_Framework\obj\Debug\net5.0\0_Framework.AssemblyInfoInputs.cache
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\0_Framework\obj\Debug\net5.0\0_Framework.AssemblyInfo.cs
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\0_Framework\obj\Debug\net5.0\0_Framework.csproj.CoreCompileInputs.cache
-H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\0_Framework\obj\Debug\net5.0\0_Framework.sourcelink.json
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\0_Framework\obj\Debug\net5.0\0_Framework.dll
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\0_Framework\obj\Debug\net5.0\refint\0_Framework.dll
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\0_Framework\obj\Debug\net5.0\0_Framework.pdb

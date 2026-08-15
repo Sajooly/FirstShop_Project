@@ -8,7 +8,6 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.AssemblyInfoInputs.cache
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.AssemblyInfo.cs
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.csproj.CoreCompileInputs.cache
-H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.sourcelink.json
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopMana.6F35FA60.Up2Date
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\ShopManagement.Application.Contracts.dll
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Application.Contracts\obj\Debug\net5.0\refint\ShopManagement.Application.Contracts.dll
