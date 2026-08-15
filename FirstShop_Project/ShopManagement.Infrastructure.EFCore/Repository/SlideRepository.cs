@@ -19,14 +19,14 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         {
             return _context.Slides.Select(x => new EditSlide
             {
-                Id = id,
+                Id = x.Id,
                 Text = x.Text,
-                BtnText = x.Text,
+                BtnText = x.BtnText,
                 Heading = x.Heading,
                 Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
-                Link=x.Link,    
+                Link = x.Link,
                 Title = x.Title
 
             }).FirstOrDefault(x => x.Id == id);
