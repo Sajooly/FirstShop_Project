@@ -52,17 +52,18 @@ namespace DiscountManagement.Infrastructure.EFCore.Repository
                     EndDate = x.EndDate.ToFarsi(),
                     StartDateEnglish = x.StartDate,
                     EndDateEnglish = x.EndDate,
+                    CreationDate = x.CreationDate.ToFarsi()
                 });
-            if (searchModel.ProductId > 0)
+            if (searchModel.ProductId > 0 && searchModel.EndDate == searchModel.StartDate)
                 query = query.Where(x => x.ProductId == searchModel.ProductId);
 
-            if (!string.IsNullOrWhiteSpace(searchModel.StartDate))
+            if (!string.IsNullOrWhiteSpace(searchModel.StartDate) && searchModel.StartDate != searchModel.EndDate)
             {
-                query = query.Where(x => x.StartDateEnglish < searchModel.StartDate.ToGeorgianDateTime());
+                query = query.Where(x => x.StartDateEnglish <= searchModel.StartDate.ToGeorgianDateTime());
             }
-            if (!string.IsNullOrWhiteSpace(searchModel.EndDate))
+            if (!string.IsNullOrWhiteSpace(searchModel.EndDate) && searchModel.StartDate != searchModel.EndDate)
             {
-                query = query.Where(x => x.EndDateEnglish > searchModel.EndDate.ToGeorgianDateTime());
+                query = query.Where(x => x.EndDateEnglish >= searchModel.EndDate.ToGeorgianDateTime());
             }
 
             var result = query.OrderByDescending(x => x.Id).ToList();
@@ -72,7 +73,7 @@ namespace DiscountManagement.Infrastructure.EFCore.Repository
             return result;
 
 
-            #region Second Code For This Method
+            #region Second Code For This Method but it was bug
             //var query2 = _context.CustomerDiscounts
             //    .Join(_shopContext.Products,
             //    customerDiscount => customerDiscount.ProductId,
