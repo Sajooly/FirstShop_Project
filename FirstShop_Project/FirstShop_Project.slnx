@@ -1,4 +1,16 @@
 <Solution>
+  <Folder Name="/DiscountManagement/" />
+  <Folder Name="/DiscountManagement/DM.Application/">
+    <Project Path="DiscountManagement.Application.Contract/DiscountManagement.Application.Contract.csproj" Id="c4e9b378-ec66-442e-b889-3108662a51f4" />
+    <Project Path="DiscountManagement.Application/DiscountManagement.Application.csproj" Id="69d3f2c3-60e8-42b7-b175-4189aee59a62" />
+  </Folder>
+  <Folder Name="/DiscountManagement/DM.Domain/">
+    <Project Path="DiscountManagement.Domain/DiscountManagement.Domain.csproj" Id="bc32dec6-155b-4f5f-8569-b05250fe4a91" />
+  </Folder>
+  <Folder Name="/DiscountManagement/DM.Infrastructure/">
+    <Project Path="DiscountManagement.Configuration/DiscountManagement.Configuration.csproj" Id="653529b7-0a91-4bfb-a8d7-28a724fbe70a" />
+    <Project Path="DiscountManagement.Infrastructure.EFCore/DiscountManagement.Infrastructure.EFCore.csproj" Id="aad72b56-16a9-4399-80dc-9fea6cad9e77" />
+  </Folder>
   <Folder Name="/ShopManagement/" />
   <Folder Name="/ShopManagement/SM.Application/">
     <Project Path="ShopManagement.Application.Contracts/ShopManagement.Application.Contracts.csproj" />

@@ -1,4 +1,5 @@
-﻿using _0_Framework.Infrastructure;
+﻿using _0_Framework.Application;
+using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.Application.Contracts.Product;
 using ShopManagement.Domain.ProductAgg;
@@ -41,7 +42,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             return _context.Products.Select(x => new ProductViewModel
             {
                 Id = x.Id,
-                Name= x.Name
+                Name = x.Name
             }).ToList();
         }
 
@@ -59,7 +60,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                      CategoryName = x.Category.Name,
                      CategoryId = x.CategoryId,
                      IsInStore = x.IsInStore,
-                     CreationDate = x.CreationDate.ToString()
+                     CreationDate = x.CreationDate.ToFarsi()
                  });
 
             if (!string.IsNullOrEmpty(searchModel.Name))

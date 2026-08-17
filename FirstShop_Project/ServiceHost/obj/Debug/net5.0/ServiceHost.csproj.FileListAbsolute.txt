@@ -102,3 +102,13 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\ServiceHost.genruntimeconfig.cache
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\ref\ServiceHost.dll
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ProductCategory\Default.cshtml.g.cs
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.Contract.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\DiscountManagement.Configuration.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\DiscountManagement.Domain.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\DiscountManagement.Configuration.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.Contract.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\DiscountManagement.Domain.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.pdb
