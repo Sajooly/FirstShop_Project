@@ -1,4 +1,5 @@
-﻿using DiscountManagement.Domain.CustomerDiscountAgg;
+﻿using DiscountManagement.Domain.ColleagueDiscountAgg;
+using DiscountManagement.Domain.CustomerDiscountAgg;
 using DiscountManagement.Infrastructure.EFCore.Mapping;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,7 +8,7 @@ namespace DiscountManagement.Infrastructure.EFCore
     public class DiscountContext : DbContext
     {
         public DbSet<CustomerDiscount> CustomerDiscounts { get; set; }
-
+        public DbSet<ColleagueDiscount> ColleagueDiscounts { get; set; }
 
         public DiscountContext(DbContextOptions<DiscountContext> options) : base(options)
         {
@@ -16,6 +17,7 @@ namespace DiscountManagement.Infrastructure.EFCore
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.ApplyConfiguration(new CustomerDiscountMapping());
+            //modelBuilder.ApplyConfiguration(new ColleagueDiscountMapping());
 
             var assembly = typeof(CustomerDiscountMapping).Assembly;
             modelBuilder.ApplyConfigurationsFromAssembly(assembly);
