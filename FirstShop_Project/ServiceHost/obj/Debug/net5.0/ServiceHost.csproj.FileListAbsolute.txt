@@ -118,3 +118,13 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\ColleagueDiscount\Create.cshtml.g.cs
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\ColleagueDiscount\Edit.cshtml.g.cs
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\ColleagueDiscount\Index.cshtml.g.cs
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.Contract.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\InventoryManagement.Configuration.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\InventoryManagement.Domain.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\InventoryManagement.Configuration.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.Contract.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\InventoryManagement.Domain.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.pdb
