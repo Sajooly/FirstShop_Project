@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using System;
 using System.Collections.Generic;
 
 namespace InventoryManagement.Application.Contract.Inventory
@@ -12,7 +13,6 @@ namespace InventoryManagement.Application.Contract.Inventory
         OperationResult Increase(IncreaseInventory command);
         OperationResult Decrease(List<DecreaseInventory> command);
         OperationResult Decrease(DecreaseInventory command);
-
-
+        List<InventoryOperationViewModel> GetOperationLogBy(int inventoryId);
     }
 }

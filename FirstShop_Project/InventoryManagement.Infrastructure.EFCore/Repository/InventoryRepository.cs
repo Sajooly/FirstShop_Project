@@ -1,4 +1,5 @@
-﻿using _0_Framework.Infrastructure;
+﻿using _0_Framework.Application;
+using _0_Framework.Infrastructure;
 using InventoryManagement.Application.Contract.Inventory;
 using InventoryManagement.Domain.InventoryAgg;
 using ShopManagement.Infrastructure.EFCore;
@@ -33,6 +34,28 @@ namespace InventoryManagement.Infrastructure.EFCore.Repository
             return _context.Inventory.FirstOrDefault(x => x.ProductId == ProductId);
         }
 
+        public List<InventoryOperationViewModel> GetOperationBy(int inventoryId)
+        {
+            return _context.Inventory
+                 .Where(x => x.Id == inventoryId)
+                 .SelectMany(x => x.Operations.Select(o => new InventoryOperationViewModel
+                 {
+                     Id = o.Id,
+                     Count = o.Count,
+                     CurrentCount = o.CurrentCount,
+                     Description = o.Description,
+                     Operation = o.Operation,
+                     OperationDate = o.OperationDate.ToFarsi(),
+                     OperatorName = "مدیر سیستم",
+                     OperatorId = o.OperatorId,
+                     OrderId = o.OrderId,
+                 }))
+                 .ToList()
+                 .OrderByDescending(x => x.Id)
+                 .ToList();
+
+        }
+
         public List<InventoryViewModel> Search(InventorySearchModel searchModel)
         {
             var products = _shopContext.Products.Select(x => new { x.Id, x.Name }).ToList();
@@ -43,13 +66,14 @@ namespace InventoryManagement.Infrastructure.EFCore.Repository
                 UnitPrice = x.UnitPrice,
                 InStock = x.InStock,
                 ProductId = x.ProductId,
-                CurrentCount = x.CalculateInStock()
+                CurrentCount = x.CalculateInStock(),
+                CreationDate = x.CreationDate.ToFarsi()
             });
 
             if (searchModel.ProductId > 0)
                 query = query.Where(x => x.ProductId == searchModel.ProductId);
 
-            if (!searchModel.InStock)
+            if (searchModel.InStock)
                 query = query.Where(x => !x.InStock);
 
             var result = query.OrderByDescending(x => x.Id).ToList();

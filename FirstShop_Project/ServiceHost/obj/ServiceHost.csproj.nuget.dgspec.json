@@ -557,6 +557,9 @@
             "projectReferences": {
               "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\0_Framework\\0_Framework.csproj": {
                 "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\0_Framework\\0_Framework.csproj"
+              },
+              "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj": {
+                "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contracts.csproj"
               }
             }
           }
