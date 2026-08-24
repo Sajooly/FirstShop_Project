@@ -33,7 +33,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
                 ShortDescription = x.ShortDescription,
-                UnitPrice = x.UnitPrice
+                //UnitPrice = x.UnitPrice This Property Added To Inventory Model
             }).FirstOrDefault(x => x.Id == id);
         }
 
@@ -56,10 +56,10 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                      Name = x.Name,
                      Code = x.Code,
                      Picture = x.Picture,
-                     UnitPrice = x.UnitPrice,
+                     //UnitPrice = x.UnitPrice, This Property Added To Inventory Model
                      CategoryName = x.Category.Name,
                      CategoryId = x.CategoryId,
-                     IsInStore = x.IsInStore,
+                     //IsInStore = x.IsInStore, This Property Added To Inventory Model
                      CreationDate = x.CreationDate.ToFarsi()
                  });
 

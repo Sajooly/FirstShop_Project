@@ -64,8 +64,8 @@
                                     <th>نام</th>
                                     <th>کد</th>
                                     <th>گروه</th>
-                                    <th>قیمت</th>
-                                    <th>موجودی</th>
+                                @*     <th>قیمت</th> *@
+                                 @*    <th>موجودی</th> *@
                                     <th>تاریخ تولید</th>
                                     <th>عملیات</th>
                                 </tr>
@@ -81,8 +81,8 @@
                                         <td>@item.Name</td>
                                         <td>@item.Code</td>
                                         <td>@item.CategoryName</td>
-                                        <td>@item.UnitPrice</td>
-                                        <td class="text-center">
+                                        @*   <td>@item.UnitPrice</td> *@
+                                        @*  <td class="text-center">
                                             @if (item.IsInStore)
                                             {
                                                 <i class="fa fa-check fa-2x text-success"></i>
@@ -91,14 +91,14 @@
                                             {
                                                 <i class="fa fa-remove fa-2x text-danger"></i>
                                             }
-                                        </td>
+                                        </td> *@
                                         <td>@item.CreationDate</td>
                                         <td>
                                             <a class="btn btn-warning pull-right m-r-5" href="#showmodal=@Url.Page("Index", "Edit", new { id = item.Id })">
                                                 <i class="fa fa-edit"></i>
                                                 ویرایش
                                             </a>
-                                            @if (item.IsInStore)
+                                           @*  @if (item.IsInStore)
                                             {
                                                 <a asp-page="Index" asp-page-handler="RemoveInStore" asp-route-id="@item.Id"
                                                    class="btn btn-danger">اتمام موجودی</a>
@@ -107,7 +107,7 @@
                                             {
                                                 <a asp-page="Index" asp-page-handler="AddInStore" asp-route-id="@item.Id"
                                                    class="btn btn-success">موجود شد</a>
-                                            }
+                                            } *@
                                         </td>
                                     </tr>
                                 }

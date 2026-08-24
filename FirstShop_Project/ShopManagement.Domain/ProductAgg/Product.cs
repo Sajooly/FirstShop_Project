@@ -9,8 +9,8 @@ namespace ShopManagement.Domain.ProductAgg
     {
         public string Name { get; private set; }
         public string Code { get; private set; }
-        public double UnitPrice { get; private set; }
-        public bool IsInStore { get; private set; }
+        //public double UnitPrice { get; private set; } //This Property Added To Inventory Model
+        //public bool IsInStore { get; private set; }   //This Property Added To Inventory Model
         public string ShortDescription { get; private set; }
         public string Description { get; private set; }
         public string Picture { get; private set; }
@@ -27,12 +27,12 @@ namespace ShopManagement.Domain.ProductAgg
         public ProductCategory Category { get; private set; }
         public List<ProductPicture> ProductPictures { get; private set; }
 
-        public Product(string name, string code, double unitPrice, string shortDescription, string description,
+        public Product(string name, string code/*, double unitPrice*/, string shortDescription, string description,
             string picture, string pictureAlt, string pictureTitle, string keywords, string metaDescription, string slug, int categoryId)
         {
             Name = name;
             Code = code;
-            UnitPrice = unitPrice;
+            //UnitPrice = unitPrice; //This Property Added To Inventory Model
             ShortDescription = shortDescription;
             Description = description;
             Picture = picture;
@@ -42,15 +42,15 @@ namespace ShopManagement.Domain.ProductAgg
             MetaDescription = metaDescription;
             Slug = slug;
             CategoryId = categoryId;
-            IsInStore = true;
+            //IsInStore = true; //This Property Added To Inventory Model
         }
 
-        public void Edit(string name, string code, double unitPrice, string shortDescription, string description,
+        public void Edit(string name, string code/*, double unitPrice*/, string shortDescription, string description,
             string picture, string pictureAlt, string pictureTitle, string keywords, string metaDescription, string slug, int categoryId)
         {
             Name = name;
             Code = code;
-            UnitPrice = unitPrice;
+            //UnitPrice = unitPrice; //This Property Added To Inventory Model
             ShortDescription = shortDescription;
             Description = description;
             Picture = picture;
@@ -62,13 +62,13 @@ namespace ShopManagement.Domain.ProductAgg
             CategoryId = categoryId;
         }
 
-        public void AddInStore()
-        {
-            IsInStore = true;
-        }
-        public void RemoveInStore()
-        {
-            IsInStore = false;
-        }
+        //public void AddInStore()
+        //{
+        //    IsInStore = true; //This Property Added To Inventory Model
+        //}
+        //public void RemoveInStore()
+        //{
+        //    IsInStore = false; //This Property Added To Inventory Model
+        //}
     }
 }

@@ -15,18 +15,18 @@ namespace ShopManagement.Application
             _productRepository = productRepository;
         }
 
-        public OperationResult AddInStore(int id)
-        {
-            var operation = new OperationResult();
-            var product = _productRepository.GetBy(id);
-            if (product == null)
-                return operation.Failed(ApplicationMessages.RecordNotFound);
+        //public OperationResult AddInStore(int id)
+        //{
+        //    var operation = new OperationResult();
+        //    var product = _productRepository.GetBy(id);
+        //    if (product == null)
+        //        return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            product.AddInStore();
+        //    product.AddInStore();
 
-            _productRepository.SaveChanges();
-            return operation.Succedded();
-        }
+        //    _productRepository.SaveChanges();
+        //    return operation.Succedded();
+        //}
 
         public OperationResult Create(CreateProduct command)
         {
@@ -36,7 +36,7 @@ namespace ShopManagement.Application
 
             var slug = command.Slug.Slugify();
 
-            _productRepository.Create(new Product(command.Name, command.Code, command.UnitPrice, command.ShortDescription,
+            _productRepository.Create(new Product(command.Name, command.Code/*, command.UnitPrice*/, command.ShortDescription,
                 command.Description, command.Picture, command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription, slug, command.CategoryId));
             _productRepository.SaveChanges();
             return operation.Succedded();
@@ -54,7 +54,7 @@ namespace ShopManagement.Application
 
             var slug = command.Slug.Slugify();
 
-            product.Edit(command.Name, command.Code, command.UnitPrice, command.ShortDescription,
+            product.Edit(command.Name, command.Code/*, command.UnitPrice*/, command.ShortDescription,
                 command.Description, command.Picture, command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription, slug, command.CategoryId);
 
             _productRepository.SaveChanges();
@@ -71,18 +71,18 @@ namespace ShopManagement.Application
             return _productRepository.GetProductsName();
         }
 
-        public OperationResult RemoveInStore(int id)
-        {
-            var operation = new OperationResult();
-            var product = _productRepository.GetBy(id);
-            if (product == null)
-                return operation.Failed(ApplicationMessages.RecordNotFound);
+        //public OperationResult RemoveInStore(int id)
+        //{
+        //    var operation = new OperationResult();
+        //    var product = _productRepository.GetBy(id);
+        //    if (product == null)
+        //        return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            product.RemoveInStore();
+        //    product.RemoveInStore();
 
-            _productRepository.SaveChanges();
-            return operation.Succedded();
-        }
+        //    _productRepository.SaveChanges();
+        //    return operation.Succedded();
+        //}
 
         public List<ProductViewModel> Search(ProductSearchModel searchModel)
         {
