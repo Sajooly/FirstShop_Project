@@ -23,3 +23,15 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configurati
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\obj\Debug\net5.0\refint\ShopManagement.Configuration.dll
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.pdb
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\obj\Debug\net5.0\ref\ShopManagement.Configuration.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.Contract.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Domain.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Application.Contract.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Domain.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Application.Contract.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Domain.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Application.Contract.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Domain.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.pdb

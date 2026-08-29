@@ -32,6 +32,15 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\0_Framework\\0_Framework.csproj"
+              },
+              "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj"
+              },
+              "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\InventoryManagement.Infrastructure.EFCore\\InventoryManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\InventoryManagement.Infrastructure.EFCore\\InventoryManagement.Infrastructure.EFCore.csproj"
+              },
               "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\ShopManagement.Infrastructure.EFCore\\ShopManagement.Infrastructure.EFCore.csproj": {
                 "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\ShopManagement.Infrastructure.EFCore\\ShopManagement.Infrastructure.EFCore.csproj"
               }

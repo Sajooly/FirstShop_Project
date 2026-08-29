@@ -1294,6 +1294,9 @@
       },
       "01_ShopQuery/1.0.0": {
         "dependencies": {
+          "0_Framework": "1.0.0",
+          "DiscountManagement.Infrastructure.EFCore": "1.0.0",
+          "InventoryManagement.Infrastructure.EFCore": "1.0.0",
           "ShopManagement.Infrastructure.EFCore": "1.0.0"
         },
         "runtime": {
