@@ -36,7 +36,9 @@ namespace _01_ShopQuery.Query
                 PictureTitle = x.PictureTitle,
                 Slug = x.Slug
 
-            }).ToList();
+            })
+                .AsNoTracking()
+                .ToList();
         }
 
         public List<ProductCategoryQueryModel> GetProductCategoriesWithProduct()
@@ -67,7 +69,9 @@ namespace _01_ShopQuery.Query
                         PictureTitle = p.PictureTitle,
                         Slug = p.Slug,
                     }).OrderByDescending(p => p.Id).ToList()
-                }).ToList();
+                })
+                .AsNoTracking()
+                .ToList();
 
 
             category.ForEach(c =>
@@ -120,7 +124,9 @@ namespace _01_ShopQuery.Query
                         Slug = p.Slug,
                     }).OrderByDescending(p => p.Id).ToList()
 
-                }).FirstOrDefault(x => x.Slug == slug);
+                })
+                .AsNoTracking()
+                .FirstOrDefault(x => x.Slug == slug);
 
 
             foreach (var product in category.Products)
