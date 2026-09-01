@@ -22,7 +22,7 @@ namespace ShopManagement.Domain.ProductCategoryAgg
 
 
 
-        public ProductCategory()
+        protected ProductCategory()
         {
             Products = new List<Product>();
         }
@@ -42,7 +42,9 @@ namespace ShopManagement.Domain.ProductCategoryAgg
         {
             Name = name;
             Description = description;
-            Picture = picture;
+            if (!string.IsNullOrWhiteSpace(picture))
+                Picture = picture;
+
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
             Keywords = keywords;

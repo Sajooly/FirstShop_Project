@@ -8,5 +8,6 @@ namespace ShopManagement.Domain.ProductPictureAgg
     {
         EditProductPicture GetDetails(int id);
         List<ProductPictureViewModel> Search(ProductPictureSearchModel searchModel);
+        ProductPicture GetWithProductAndCategory(int id);
     }
 }

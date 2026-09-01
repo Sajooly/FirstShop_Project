@@ -1775,7 +1775,10 @@
         },
         "runtime": {
           "bin/placeholder/0_Framework.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "ShopManagement.Application.Contracts/1.0.0": {
         "type": "project",
@@ -1788,7 +1791,10 @@
         },
         "runtime": {
           "bin/placeholder/ShopManagement.Application.Contracts.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "ShopManagement.Domain/1.0.0": {
         "type": "project",

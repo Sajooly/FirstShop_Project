@@ -53,7 +53,10 @@ namespace ShopManagement.Domain.ProductAgg
             //UnitPrice = unitPrice; //This Property Added To Inventory Model
             ShortDescription = shortDescription;
             Description = description;
-            Picture = picture;
+
+            if (!string.IsNullOrWhiteSpace(picture))
+                Picture = picture;
+
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
             Keywords = keywords;
