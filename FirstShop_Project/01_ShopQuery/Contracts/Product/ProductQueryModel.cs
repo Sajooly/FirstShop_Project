@@ -25,6 +25,7 @@ namespace _01_ShopQuery.Contracts.Product
         public bool IsInStock { get; set; }
 
 
-        public List<ProductPictureQueryModel> ProductPictures { get; set; }
+        public List<ProductPictureQueryModel> ProductPictures { get; set; } = new();
+        public List<CommentQueryModel> Comments { get; set; } = new();
     }
 }

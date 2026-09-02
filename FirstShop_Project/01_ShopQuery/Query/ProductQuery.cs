@@ -32,6 +32,7 @@ namespace _01_ShopQuery.Query
             var product = _shopContext.Products
               .Include(x => x.Category)
               .Include(x => x.ProductPictures)
+              .Include(co => co.Comments)
               .Select(x => new ProductQueryModel
               {
                   Id = x.Id,
@@ -48,6 +49,7 @@ namespace _01_ShopQuery.Query
                   Keyword = x.Keywords,
                   MetaDescription = x.MetaDescription,
 
+
                   ProductPictures = x.ProductPictures.Select(pp => new ProductPictureQueryModel
                   {
                       Picture = pp.Picture,
@@ -56,7 +58,18 @@ namespace _01_ShopQuery.Query
                       IsRemoved = pp.IsRemoved,
                       ProductId = pp.ProductId
 
-                  }).Where(x => !x.IsRemoved).ToList()
+                  }).Where(x => !x.IsRemoved).ToList(),
+
+
+                  Comments = x.Comments
+                  .Where(x => x.IsConfirmed)
+                  .Select(com => new CommentQueryModel
+                  {
+                      Id = com.Id,
+                      Name = com.Name,
+                      Message = com.Message
+                  }).OrderByDescending(x => x.Id).ToList()
+
               })
               .AsNoTracking()
               .FirstOrDefault(x => x.Slug == slug);
