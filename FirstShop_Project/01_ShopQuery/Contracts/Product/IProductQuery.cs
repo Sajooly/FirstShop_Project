@@ -6,5 +6,6 @@ namespace _01_ShopQuery.Contracts.Product
     {
         List<ProductQueryModel> GetLatestProducts();
         List<ProductQueryModel> Search(string searchInProducts);
+        ProductQueryModel GetDetailsBy(string slug);
     }
 }

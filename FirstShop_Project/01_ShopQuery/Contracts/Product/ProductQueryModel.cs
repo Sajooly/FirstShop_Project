@@ -1,4 +1,6 @@
-﻿namespace _01_ShopQuery.Contracts.Product
+﻿using System.Collections.Generic;
+
+namespace _01_ShopQuery.Contracts.Product
 {
     public class ProductQueryModel
     {
@@ -16,6 +18,13 @@
         public string DiscountExpireDate { get; set; }
         public string ShortDiscription { get; set; }
         public string CategorySlug { get; set; }
+        public string Code { get; set; }
+        public string Keyword { get; set; }
+        public string Description { get; set; }
+        public string MetaDescription { get; set; }
+        public bool IsInStock { get; set; }
 
+
+        public List<ProductPictureQueryModel> ProductPictures { get; set; }
     }
 }

@@ -23,6 +23,66 @@ namespace _01_ShopQuery.Query
             _discountContext = discountContext;
         }
 
+        public ProductQueryModel GetDetailsBy(string slug)
+        {
+            var inventory = _inventoryContext.Inventory.Select(x => new { x.ProductId, x.UnitPrice, x.InStock }).ToList();
+
+            var discounts = _discountContext.CustomerDiscounts.Where(x => x.StartDate <= DateTime.Now && x.EndDate >= DateTime.Now).Select(x => new { x.ProductId, x.DiscountRate, x.EndDate }).ToList();
+
+            var product = _shopContext.Products
+              .Include(x => x.Category)
+              .Include(x => x.ProductPictures)
+              .Select(x => new ProductQueryModel
+              {
+                  Id = x.Id,
+                  Name = x.Name,
+                  Picture = x.Picture,
+                  PictureAlt = x.PictureAlt,
+                  PictureTitle = x.PictureTitle,
+                  Category = x.Category.Name,
+                  Slug = x.Slug,
+                  CategorySlug = x.Category.Slug,
+                  ShortDiscription = x.ShortDescription,
+                  Code = x.Code,
+                  Description = x.Description,
+                  Keyword = x.Keywords,
+                  MetaDescription = x.MetaDescription,
+
+                  ProductPictures = x.ProductPictures.Select(pp => new ProductPictureQueryModel
+                  {
+                      Picture = pp.Picture,
+                      PictureAlt = pp.PictureAlt,
+                      PictureTitle = pp.PictureTitle,
+                      IsRemoved = pp.IsRemoved,
+                      ProductId = pp.ProductId
+
+                  }).Where(x => !x.IsRemoved).ToList()
+              })
+              .AsNoTracking()
+              .FirstOrDefault(x => x.Slug == slug);
+
+
+            if (product == null)
+                return new ProductQueryModel();
+
+            var price = inventory.FirstOrDefault(x => x.ProductId == product.Id)?.UnitPrice ?? 0;
+            product.Price = price.ToMoney();
+
+            product.DiscountRate = discounts.FirstOrDefault(x => x.ProductId == product.Id)?.DiscountRate ?? 0;
+            product.HasDiscount = product.DiscountRate > 0;
+
+            var discountAmount = Math.Round(price * product.DiscountRate) / 100;
+            var finalPrice = price - discountAmount;
+            product.PriceWithDiscount = finalPrice.ToMoney();
+
+
+            product.DiscountExpireDate = discounts.FirstOrDefault(x => x.ProductId == product.Id)?.EndDate.ToDiscountFormat();
+
+            product.IsInStock = inventory.FirstOrDefault(x => x.ProductId == product.Id)?.InStock ?? false;
+
+            return product;
+        }
+
         public List<ProductQueryModel> GetLatestProducts()
         {
             var inventory = _inventoryContext.Inventory.Select(x => new { x.ProductId, x.UnitPrice }).ToList();

@@ -38,26 +38,26 @@
                         {"breakpoint":479, "settings": {"slidesToShow": 1, "arrows": false} }
                     ]'>
 
-                        @foreach (var prodcut in Model)
+                        @foreach (var product in Model)
                         {
                             <div class="col">
                                 <div class="single-grid-product">
                                     <div class="single-grid-product__image">
                                         <div class="single-grid-product__label">
-                                            @if (prodcut.HasDiscount)
+                                            @if (product.HasDiscount)
                                             {
-                                                <span class="sale">-@prodcut.DiscountRate%</span>
+                                                <span class="sale">-@product.DiscountRate%</span>
                                             }
                                             <span class="new">جدید</span>
                                         </div>
-                                        <a href="single-product.html">
-                                            <img src="~/ProductPictures/@prodcut.Picture" class="img-fluid" alt="@prodcut.PictureAlt" title="@prodcut.PictureTitle">
+                                        <a asp-page="/Product" asp-route-id="@product.Slug">
+                                            <img src="~/ProductPictures/@product.Picture" class="img-fluid" alt="@product.PictureAlt" title="@product.PictureTitle">
                                         </a>
 
                                     </div>
                                     <div class="single-grid-product__content">
                                         <div class="single-grid-product__category-rating">
-                                            <span class="category"><a href="shop-left-sidebar.html">@prodcut.Category</a></span>
+                                            <span class="category"><a asp-page="/ProductCategory" asp-route-id="@product.CategorySlug">@product.Category</a></span>
                                             <span class="rating">
                                                 <i class="ion-android-star active"></i>
                                                 <i class="ion-android-star active"></i>
@@ -68,17 +68,17 @@
                                         </div>
 
                                         <h3 class="single-grid-product__title">
-                                            <a href="single-product.html">@prodcut.Name</a>
+                                            <a asp-page="/Product" asp-route-id="@product.Slug">@product.Name</a>
                                         </h3>
                                         <p class="single-grid-product__price">
-                                            @if (prodcut.HasDiscount)
+                                            @if (product.HasDiscount)
                                             {
-                                                <span class="discounted-price">@prodcut.PriceWithDiscount تومان</span>
-                                                <span class="main-price discounted">@prodcut.Price</span>
+                                                <span class="discounted-price">@product.PriceWithDiscount تومان</span>
+                                                <span class="main-price discounted">@product.Price</span>
                                             }
                                             else
                                             {
-                                                <span class="main-price ">@prodcut.Price تومان</span>
+                                                <span class="main-price ">@product.Price تومان</span>
                                             }
                                         </p>
                                     </div>
