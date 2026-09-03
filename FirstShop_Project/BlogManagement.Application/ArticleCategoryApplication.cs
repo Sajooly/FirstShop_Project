@@ -27,7 +27,7 @@ namespace BlogManagement.Application
             var slug = command.Slug.Slugify();
             var fileName = _fileUploader.Upload(command.Picture, $"Blog/{slug}");
 
-            _articleCategoryRepository.Create(new ArticleCategory(command.Name, fileName, command.Description,
+            _articleCategoryRepository.Create(new ArticleCategory(command.Name, fileName, command.PictureAlt, command.PictureTitle, command.Description,
                 command.ShowOrder, slug, command.Keyword, command.MetaDescription, command.CanonicalAddress));
 
             _articleCategoryRepository.SaveChanges();
@@ -50,7 +50,8 @@ namespace BlogManagement.Application
             var slug = command.Slug.Slugify();
             var fileName = _fileUploader.Upload(command.Picture, $"Blog/{slug}");
 
-            entity.Edit(command.Name, fileName, command.Description, command.ShowOrder, command.Slug, command.Keyword, command.MetaDescription, command.CanonicalAddress);
+            entity.Edit(command.Name, fileName, command.PictureAlt, command.PictureTitle, command.Description,
+                command.ShowOrder, command.Slug, command.Keyword, command.MetaDescription, command.CanonicalAddress);
             _articleCategoryRepository.SaveChanges();
             return operation.Succedded();
         }

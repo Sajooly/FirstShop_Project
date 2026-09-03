@@ -1,4 +1,5 @@
-﻿using _0_Framework.Infrastructure;
+﻿using _0_Framework.Application;
+using _0_Framework.Infrastructure;
 using BlogManagement.Application.Contract.ArticleCategory;
 using BlogManagement.Domain.ArticleCategoryAgg;
 using System;
@@ -29,6 +30,8 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
                 MetaDescription = x.MetaDescription,
                 ShowOrder = x.ShowOrder,
                 Slug = x.Slug,
+                PictureTitle = x.PictureTitle,
+                PictureAlt = x.PictureAlt,
 
             }).FirstOrDefault(x => x.Id == id);
         }
@@ -41,7 +44,8 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
                 Name = x.Name,
                 Description = x.Description,
                 ShowOrder = x.ShowOrder,
-                Picture = x.Picture
+                Picture = x.Picture,
+                CreationDate = x.CreationDate.ToFarsi(),
             });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
