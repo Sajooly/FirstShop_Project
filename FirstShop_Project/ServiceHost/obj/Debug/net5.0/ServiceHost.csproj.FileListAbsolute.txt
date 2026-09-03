@@ -142,3 +142,14 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Pages\Search.cshtml.g.cs
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Pages\Product.cshtml.g.cs
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Comments\Index.cshtml.g.cs
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.Contract.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\BlogManagement.Configuration.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\BlogManagement.Domain.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\BlogManagement.Configuration.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.Contract.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\BlogManagement.Domain.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\ServiceHost.MvcApplicationPartsAssemblyInfo.cs

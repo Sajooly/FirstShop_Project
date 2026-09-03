@@ -1,4 +1,16 @@
 <Solution>
+  <Folder Name="/BlogManagement/" />
+  <Folder Name="/BlogManagement/BM.Application/">
+    <Project Path="BlogManagement.Application.Contract/BlogManagement.Application.Contract.csproj" Id="bb815c5a-fae1-4281-8ba2-d4a68c05dab1" />
+    <Project Path="BlogManagement.Application/BlogManagement.Application.csproj" Id="79cecd55-d6a2-4559-86e6-a03562fde21d" />
+  </Folder>
+  <Folder Name="/BlogManagement/BM.Domain/">
+    <Project Path="BlogManagement.Domain/BlogManagement.Domain.csproj" Id="0ad5c876-d38d-45e1-82cf-2e477b5e6085" />
+  </Folder>
+  <Folder Name="/BlogManagement/BM.Infrastructure/">
+    <Project Path="BlogManagement.Configuration/BlogManagement.Configuration.csproj" Id="cd265ba8-fecf-4063-92a1-0be1394b75c0" />
+    <Project Path="BlogManagement.Infrastructure.EFCore/BlogManagement.Infrastructure.EFCore.csproj" Id="9cae61ec-6781-4234-9e76-c4354be6785b" />
+  </Folder>
   <Folder Name="/DiscountManagement/" />
   <Folder Name="/DiscountManagement/DM.Application/">
     <Project Path="DiscountManagement.Application.Contract/DiscountManagement.Application.Contract.csproj" Id="c4e9b378-ec66-442e-b889-3108662a51f4" />
