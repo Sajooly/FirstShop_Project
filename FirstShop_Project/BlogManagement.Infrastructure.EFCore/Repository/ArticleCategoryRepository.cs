@@ -18,6 +18,15 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
             _context = context;
         }
 
+        public List<ArticleCategoryViewModel> GetAllCategoryNames()
+        {
+            return _context.ArticleCategories.Select(x => new ArticleCategoryViewModel
+            {
+                Id = x.Id,
+                Name = x.Name
+            }).ToList();
+        }
+
         public EditArticleCategory GetDetails(int id)
         {
             return _context.ArticleCategories.Select(x => new EditArticleCategory
