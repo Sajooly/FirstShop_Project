@@ -35,3 +35,9 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configurati
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Application.Contract.pdb
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Domain.pdb
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Application.Contract.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Domain.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Application.Contract.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Domain.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.pdb

@@ -21,7 +21,7 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
         {
             return _context.Articles.Select(a => new EditArticle
             {
-                Id = id,
+                Id = a.Id,
                 Title = a.Title,
                 ShortDescription = a.ShortDescription,
                 Description = a.Description,

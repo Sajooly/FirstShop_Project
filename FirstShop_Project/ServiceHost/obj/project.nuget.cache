@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YmN29sO19HE=",
+  "dgSpecHash": "qNxcoli4E1o=",
   "success": true,
   "projectFilePath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\ServiceHost\\ServiceHost.csproj",
   "expectedPackageFiles": [
@@ -101,5 +101,15 @@
     "C:\\Users\\Acer\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\ServiceHost\\ServiceHost.csproj",
+      "warningLevel": 1,
+      "filePath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\ServiceHost\\ServiceHost.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

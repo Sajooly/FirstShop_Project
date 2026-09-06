@@ -35,6 +35,9 @@
               "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\0_Framework\\0_Framework.csproj": {
                 "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\0_Framework\\0_Framework.csproj"
               },
+              "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\BlogManagement.Infrastructure.EFCore\\BlogManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\BlogManagement.Infrastructure.EFCore\\BlogManagement.Infrastructure.EFCore.csproj"
+              },
               "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj": {
                 "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj"
               },
@@ -320,6 +323,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\01_ShopQuery\\01_ShopQuery.csproj": {
+                "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\01_ShopQuery\\01_ShopQuery.csproj"
+              },
               "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\BlogManagement.Application.Contract\\BlogManagement.Application.Contract.csproj": {
                 "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\BlogManagement.Application.Contract\\BlogManagement.Application.Contract.csproj"
               },

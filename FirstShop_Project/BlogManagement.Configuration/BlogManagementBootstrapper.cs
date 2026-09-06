@@ -1,4 +1,6 @@
-﻿using BlogManagement.Application;
+﻿using _01_ShopQuery.Contracts.Article;
+using _01_ShopQuery.Query;
+using BlogManagement.Application;
 using BlogManagement.Application.Contract.Article;
 using BlogManagement.Application.Contract.ArticleCategory;
 using BlogManagement.Domain.ArticleAgg;
@@ -23,6 +25,8 @@ namespace BlogManagement.Configuration
             services.AddTransient<IArticleApplication, ArticleApplication>();
             services.AddTransient<IArticleRepository, ArticleRepository>();
 
+            //Query Services
+            services.AddTransient<IArticleQuery,ArticleQuery>();
 
             //DataBase Config
             services.AddDbContext<BlogContext>(x => x.UseSqlServer(connectionString));
