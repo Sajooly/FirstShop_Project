@@ -160,3 +160,4 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\Articles\Index.cshtml.g.cs
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\Articles\Create.cshtml.g.cs
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\LatestArticles\Default.cshtml.g.cs
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Pages\Article.cshtml.g.cs

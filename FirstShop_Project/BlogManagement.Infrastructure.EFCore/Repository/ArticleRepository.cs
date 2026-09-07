@@ -3,6 +3,7 @@ using _0_Framework.Infrastructure;
 using BlogManagement.Application.Contract.Article;
 using BlogManagement.Domain.ArticleAgg;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -52,7 +53,7 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
                 {
                     Id = a.Id,
                     Title = a.Title,
-                    ShortDescription = a.ShortDescription,
+                    ShortDescription = a.ShortDescription.Substring(0, Math.Min(a.ShortDescription.Length, 50)) + "...",
                     PublishDate = a.PublishDate.ToFarsi(),
                     Picture = a.Picture,
                     CategoryName = a.Category.Name

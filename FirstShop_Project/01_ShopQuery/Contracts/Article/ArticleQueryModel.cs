@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace _01_ShopQuery.Contracts.Article
 {
@@ -23,5 +24,7 @@ namespace _01_ShopQuery.Contracts.Article
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
         public string CategorySlug { get; set; }
+
+        public List<string> KeywordList{ get; set; }
     }
 }

@@ -17,6 +17,40 @@ namespace _01_ShopQuery.Query
             _blogContext = blogContext;
         }
 
+        public ArticleQueryModel GetArticleDetailsBy(string slug)
+        {
+            var article = _blogContext.Articles
+                .Include(a => a.Category)
+                .Select(x => new ArticleQueryModel
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    Description = x.Description,
+                    ShortDescription = x.ShortDescription,
+                    PublishDate = x.PublishDate.ToFarsi(),
+
+                    Slug = x.Slug,
+                    Keyword = x.Keyword,
+                    CanonicalAddress = x.CanonicalAddress,
+                    MetaDescription = x.MetaDescription,
+
+                    Picture = x.Picture,
+                    PictureAlt = x.PictureAlt,
+                    PictureTitle = x.PictureTitle,
+
+                    //CategoryId = x.CategoryId,
+                    CategoryName = x.Category.Name,
+                    CategorySlug = x.Category.Slug,
+
+                })
+                .AsNoTracking()
+                .FirstOrDefault(x => x.Slug == slug);
+
+            article.KeywordList = article.Keyword.Split(' ', ',').ToList();
+
+            return article;
+        }
+
         public List<ArticleQueryModel> GetLatestArticles()
         {
             return _blogContext.Articles
@@ -27,7 +61,7 @@ namespace _01_ShopQuery.Query
                     Id = x.Id,
                     Title = x.Title,
                     PublishDate = x.PublishDate.ToFarsi(),
-                    Description = x.Description,
+                    //Description = x.Description,
                     ShortDescription = x.ShortDescription,
 
                     Picture = x.Picture,
@@ -35,13 +69,13 @@ namespace _01_ShopQuery.Query
                     PictureTitle = x.PictureTitle,
 
                     Slug = x.Slug,
-                    Keyword = x.Keyword,
-                    MetaDescription = x.MetaDescription,
-                    CanonicalAddress = x.CanonicalAddress,
+                    //Keyword = x.Keyword,
+                    //MetaDescription = x.MetaDescription,
+                    //CanonicalAddress = x.CanonicalAddress,
 
-                    CategoryId = x.CategoryId,
-                    CategoryName = x.Category.Name,
-                    CategorySlug = x.Category.Slug,
+                    //CategoryId = x.CategoryId,
+                    //CategoryName = x.Category.Name,
+                    //CategorySlug = x.Category.Slug,
                 })
                 .OrderByDescending(x => x.Id)
                 .Take(5)
