@@ -1,4 +1,6 @@
-﻿@{
+﻿@using _01_ShopQuery
+@model MenuModel
+@{
 }
 
 <div class="header-area header-sticky">
@@ -19,31 +21,29 @@
                                 </li>
 
                                 <li class="menu-item-has-children">
-                                    <a href="blog-left-sidebar.html">محصولات</a>
+                                    <a>محصولات</a>
                                     <ul class="sub-menu">
-                                        <li>
-                                            <a href="blog-left-sidebar.html">لوازم موبایل</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-right-sidebar.html">میز اتو</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-post-left-sidebar.html">Blog Post Left Sidebar</a>
-                                        </li>
+                                        @foreach (var category in Model.ProductCategories)
+                                        {
+                                            <li>
+                                                <a asp-page="./ProductCategory" asp-route-id="@category.Slug">@category.Name</a>
+                                            </li>
+                                        }
+
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="blog-left-sidebar.html">مقالات</a>
+                                    <a>مقالات</a>
                                     <ul class="sub-menu">
-                                        <li>
-                                            <a href="blog-left-sidebar.html">گروه 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-right-sidebar.html">گروه 2</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-post-left-sidebar.html">گروه 3</a>
-                                        </li>
+
+                                        @foreach (var category in Model.ArticleCategories)
+                                        {
+                                            <li>
+                                                <a asp-page="./ArticleCategory" asp-route-id="@category.Slug">@category.Name</a>
+                                            </li>
+                                        }
+
+
                                     </ul>
                                 </li>
 
@@ -293,7 +293,7 @@
                     </li>
                     <li>
                         <a asp-page="/Contact">تماس با ما</a>
-                    </li> 
+                    </li>
                 </ul>
             </nav>
 

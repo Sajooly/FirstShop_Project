@@ -1,4 +1,6 @@
-﻿using _01_ShopQuery.Contracts.ArticleCategory;
+﻿using _0_Framework.Application;
+using _01_ShopQuery.Contracts.Article;
+using _01_ShopQuery.Contracts.ArticleCategory;
 using BlogManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -39,6 +41,51 @@ namespace _01_ShopQuery.Query
                 })
                 .AsNoTracking()
                 .ToList();
+        }
+
+        public ArticleCategoryQueryModel GetArticleCategoryBy(string slug)
+        {
+            var articleCategory = _blogContext.ArticleCategories
+                .Include(ac => ac.Articles)
+                .Select(x => new ArticleCategoryQueryModel
+                {
+                    Name = x.Name,
+                    MetaDescription = x.MetaDescription,
+                    Description = x.Description,
+
+                    Slug = x.Slug,
+                    CanonicalAddress = x.CanonicalAddress,
+                    Keyword = x.Keyword,
+
+                    Picture = x.Picture,
+                    PictureAlt = x.PictureAlt,
+                    PictureTitle = x.PictureTitle,
+
+                    Articles = x.Articles.Select(a => new ArticleQueryModel
+                    {
+                        Id = a.Id,
+                        Slug = a.Slug,
+                        ShortDescription = a.ShortDescription,
+                        Title = a.Title,
+                        PublishDate = a.PublishDate.ToFarsi(),
+
+                        Picture = a.Picture,
+                        PictureAlt = a.PictureAlt,
+                        PictureTitle = a.PictureTitle,
+
+                    }).OrderByDescending(a => a.Id).ToList(),
+
+
+
+                    ArticlesCount = x.Articles.Count,
+
+                })
+                .AsNoTracking()
+                .FirstOrDefault(x => x.Slug == slug);
+
+                articleCategory.KeywordList = articleCategory.Keyword.Split(',', ' ').ToList();
+
+            return articleCategory;
         }
     }
 }

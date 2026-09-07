@@ -1,5 +1,6 @@
 ﻿using _0_Framework.Application;
 using _01_ShopQuery.Contracts.Article;
+using BlogManagement.Domain.ArticleCategoryAgg;
 using BlogManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -46,7 +47,7 @@ namespace _01_ShopQuery.Query
                 .AsNoTracking()
                 .FirstOrDefault(x => x.Slug == slug);
 
-            article.KeywordList = article.Keyword.Split(' ', ',').ToList();
+                article.KeywordList = article.Keyword.Split(' ', ',').ToList();
 
             return article;
         }
