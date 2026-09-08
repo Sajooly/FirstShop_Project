@@ -1,5 +1,7 @@
 ﻿using _0_Framework.Application;
+using _01_ShopQuery.Contracts.Comment;
 using _01_ShopQuery.Contracts.Product;
+using CommentManagement.Infrastructure.EFCore;
 using DiscountManagement.Infrastructure.EFCore;
 using InventoryManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
@@ -15,24 +17,26 @@ namespace _01_ShopQuery.Query
         private readonly ShopContext _shopContext;
         private readonly InventoryContext _inventoryContext;
         private readonly DiscountContext _discountContext;
+        private readonly CommentContext _commentContext;
 
-        public ProductQuery(ShopContext shopContext, InventoryContext inventoryContext, DiscountContext discountContext)
+        public ProductQuery(ShopContext shopContext, InventoryContext inventoryContext, DiscountContext discountContext, CommentContext commentContext)
         {
             _shopContext = shopContext;
             _inventoryContext = inventoryContext;
             _discountContext = discountContext;
+            _commentContext = commentContext;
         }
 
-        public ProductQueryModel GetDetailsBy(string slug)
+        public ProductQueryModel GetProductDetailsBy(string slug)
         {
             var inventory = _inventoryContext.Inventory.Select(x => new { x.ProductId, x.UnitPrice, x.InStock }).ToList();
 
             var discounts = _discountContext.CustomerDiscounts.Where(x => x.StartDate <= DateTime.Now && x.EndDate >= DateTime.Now).Select(x => new { x.ProductId, x.DiscountRate, x.EndDate }).ToList();
 
+
             var product = _shopContext.Products
               .Include(x => x.Category)
               .Include(x => x.ProductPictures)
-              .Include(co => co.Comments)
               .Select(x => new ProductQueryModel
               {
                   Id = x.Id,
@@ -61,18 +65,42 @@ namespace _01_ShopQuery.Query
                   }).Where(x => !x.IsRemoved).ToList(),
 
 
-                  Comments = x.Comments
-                  .Where(x => x.IsConfirmed)
-                  .Select(com => new CommentQueryModel
-                  {
-                      Id = com.Id,
-                      Name = com.Name,
-                      Message = com.Message
-                  }).OrderByDescending(x => x.Id).ToList()
+
 
               })
               .AsNoTracking()
               .FirstOrDefault(x => x.Slug == slug);
+
+
+
+
+            var comments = _commentContext.Comments
+                .Where(x => x.Type == CommentType.Product && x.OwnerRecordId == product.Id)
+                .Where(x => x.IsConfirmed && !x.IsCanceled)
+                .Select(x => new CommentQueryModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Message = x.Message,
+                    Website = x.Website,
+                    ParentId = product.Id,
+                    Children = x.Children.Where(a => a.ParentId == x.Id).Select(c => new CommentQueryModel
+                    {
+                        Id = x.Id,
+                        Name = x.Name,
+                        Message = x.Message,
+                        Website = x.Website,
+                        ParentId = product.Id,
+                    }).ToList()
+                })
+                .OrderByDescending(c => c.Id)
+                .AsNoTracking()
+                .ToList();
+
+            if (comments != null)
+                product.Comments = comments;
+
+
 
 
             if (product == null)
@@ -92,6 +120,12 @@ namespace _01_ShopQuery.Query
             product.DiscountExpireDate = discounts.FirstOrDefault(x => x.ProductId == product.Id)?.EndDate.ToDiscountFormat();
 
             product.IsInStock = inventory.FirstOrDefault(x => x.ProductId == product.Id)?.InStock ?? false;
+
+
+
+
+
+
 
             return product;
         }

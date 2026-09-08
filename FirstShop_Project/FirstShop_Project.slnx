@@ -11,6 +11,18 @@
     <Project Path="BlogManagement.Configuration/BlogManagement.Configuration.csproj" Id="cd265ba8-fecf-4063-92a1-0be1394b75c0" />
     <Project Path="BlogManagement.Infrastructure.EFCore/BlogManagement.Infrastructure.EFCore.csproj" Id="9cae61ec-6781-4234-9e76-c4354be6785b" />
   </Folder>
+  <Folder Name="/CommentManagement/" />
+  <Folder Name="/CommentManagement/CM.Application/">
+    <Project Path="CommentManagement.Application.Contracs/CommentManagement.Application.Contracs.csproj" Id="460c3128-c448-4375-bf24-f9c2376d72ad" />
+    <Project Path="CommentManagement.Application/CommentManagement.Application.csproj" Id="1d421ae7-8730-420d-9101-46479fefa8a3" />
+  </Folder>
+  <Folder Name="/CommentManagement/CM.Domain/">
+    <Project Path="CommentManagement.Domain/CommentManagement.Domain.csproj" Id="0e87094b-10db-4275-b0a1-150736a4c20d" />
+  </Folder>
+  <Folder Name="/CommentManagement/CM.Infrastructure/">
+    <Project Path="CommentManagement.Configuration/CommentManagement.Configuration.csproj" Id="47026cc6-e31f-4b40-98eb-31b04c20c506" />
+    <Project Path="CommentManagement.Infrastructure.EFCore/CommentManagement.Infrastructure.EFCore.csproj" Id="63a1dd18-e363-4b6f-9f6a-0727e06f2fa2" />
+  </Folder>
   <Folder Name="/DiscountManagement/" />
   <Folder Name="/DiscountManagement/DM.Application/">
     <Project Path="DiscountManagement.Application.Contract/DiscountManagement.Application.Contract.csproj" Id="c4e9b378-ec66-442e-b889-3108662a51f4" />

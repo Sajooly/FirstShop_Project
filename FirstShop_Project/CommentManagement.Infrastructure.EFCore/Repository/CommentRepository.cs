@@ -1,18 +1,17 @@
 ﻿using _0_Framework.Application;
 using _0_Framework.Infrastructure;
-using Microsoft.EntityFrameworkCore;
-using ShopManagement.Application.Contracts.Comment;
-using ShopManagement.Domain.CommentAgg;
+using CommentManagement.Application.Contracs.Comment;
+using CommentManagement.Domain.CommentAgg;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ShopManagement.Infrastructure.EFCore.Repository
+namespace CommentManagement.Infrastructure.EFCore.Repository
 {
     public class CommentRepository : RepositoryBase<int, Comment>, ICommentRepository
     {
-        private readonly ShopContext _context;
+        private readonly CommentContext _context;
 
-        public CommentRepository(ShopContext context) : base(context)
+        public CommentRepository(CommentContext context) : base(context)
         {
             _context = context;
         }
@@ -20,7 +19,6 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
         public List<CommentViewModel> Search(CommentSearchModel searchModel)
         {
             var query = _context.Comments
-                .Include(p => p.Product)
                 .Select(c => new CommentViewModel
                 {
                     Id = c.Id,
@@ -29,10 +27,11 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                     Message = c.Message,
                     IsCanceled = c.IsCanceled,
                     IsConfirmed = c.IsConfirmed,
-                    ProductId = c.ProductId,
                     CommentDate = c.CreationDate.ToFarsi(),
 
-                    ProductName = c.Product.Name
+                    OwnerRecordId = c.OwnerRecordId,
+                    Website = c.Website,
+                    Type = c.Type
                 });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))

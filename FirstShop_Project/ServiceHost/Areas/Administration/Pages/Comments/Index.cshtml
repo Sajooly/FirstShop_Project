@@ -1,6 +1,6 @@
 ﻿@page
-@using ServiceHost.Areas.Administration.Pages.Shop.Comments
-@model ServiceHost.Areas.Administration.Pages.Shop.Comments.IndexModel
+@using ServiceHost.Areas.Administration.Pages.Comments
+@model ServiceHost.Areas.Administration.Pages.Comments.IndexModel
 @{
 }
 @{
@@ -75,13 +75,13 @@
                                             {
                                                 <samp class="text-danger">کنسل شده</samp>
                                             }
+                                            else if(item.IsConfirmed)
+                                            {
+                                                <samp class="text-success">تایید شده</samp>
+                                            }
                                             @if (!item.IsCanceled && !item.IsConfirmed)
                                             {
                                                 <samp class="text-warning">در انتظار</samp>
-                                            }
-                                            @if (item.IsConfirmed)
-                                            {
-                                                <samp class="text-success">تایید شده</samp>
                                             }
                                         </td>
                                         <td>

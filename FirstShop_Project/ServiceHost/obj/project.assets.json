@@ -1758,6 +1758,7 @@
         "dependencies": {
           "0_Framework": "1.0.0",
           "BlogManagement.Infrastructure.EFCore": "1.0.0",
+          "CommentManagement.Infrastructure.EFCore": "1.0.0",
           "DiscountManagement.Infrastructure.EFCore": "1.0.0",
           "InventoryManagement.Infrastructure.EFCore": "1.0.0",
           "ShopManagement.Infrastructure.EFCore": "1.0.0"
@@ -1859,6 +1860,78 @@
         },
         "runtime": {
           "bin/placeholder/BlogManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
+      "CommentManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "CommentManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Application.dll": {}
+        }
+      },
+      "CommentManagement.Application.Contracs/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Application.Contracs.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Application.Contracs.dll": {}
+        }
+      },
+      "CommentManagement.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Application": "1.0.0",
+          "CommentManagement.Domain": "1.0.0",
+          "CommentManagement.Infrastructure.EFCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Configuration.dll": {}
+        }
+      },
+      "CommentManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "CommentManagement.Application.Contracs": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        }
+      },
+      "CommentManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Infrastructure.EFCore.dll": {}
         }
       },
       "DiscountManagement.Application/1.0.0": {
@@ -6367,6 +6440,31 @@
       "path": "../BlogManagement.Infrastructure.EFCore/BlogManagement.Infrastructure.EFCore.csproj",
       "msbuildProject": "../BlogManagement.Infrastructure.EFCore/BlogManagement.Infrastructure.EFCore.csproj"
     },
+    "CommentManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Application/CommentManagement.Application.csproj",
+      "msbuildProject": "../CommentManagement.Application/CommentManagement.Application.csproj"
+    },
+    "CommentManagement.Application.Contracs/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Application.Contracs/CommentManagement.Application.Contracs.csproj",
+      "msbuildProject": "../CommentManagement.Application.Contracs/CommentManagement.Application.Contracs.csproj"
+    },
+    "CommentManagement.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Configuration/CommentManagement.Configuration.csproj",
+      "msbuildProject": "../CommentManagement.Configuration/CommentManagement.Configuration.csproj"
+    },
+    "CommentManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Domain/CommentManagement.Domain.csproj",
+      "msbuildProject": "../CommentManagement.Domain/CommentManagement.Domain.csproj"
+    },
+    "CommentManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Infrastructure.EFCore/CommentManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../CommentManagement.Infrastructure.EFCore/CommentManagement.Infrastructure.EFCore.csproj"
+    },
     "DiscountManagement.Application/1.0.0": {
       "type": "project",
       "path": "../DiscountManagement.Application/DiscountManagement.Application.csproj",
@@ -6446,6 +6544,8 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "BlogManagement.Configuration >= 1.0.0",
+      "CommentManagement.Application.Contracs >= 1.0.0",
+      "CommentManagement.Configuration >= 1.0.0",
       "DiscountManagement.Configuration >= 1.0.0",
       "InventoryManagement.Configuration >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
@@ -6486,6 +6586,12 @@
           "projectReferences": {
             "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\BlogManagement.Configuration\\BlogManagement.Configuration.csproj": {
               "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\BlogManagement.Configuration\\BlogManagement.Configuration.csproj"
+            },
+            "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\CommentManagement.Application.Contracs\\CommentManagement.Application.Contracs.csproj": {
+              "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\CommentManagement.Application.Contracs\\CommentManagement.Application.Contracs.csproj"
+            },
+            "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\CommentManagement.Configuration\\CommentManagement.Configuration.csproj": {
+              "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\CommentManagement.Configuration\\CommentManagement.Configuration.csproj"
             },
             "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\DiscountManagement.Configuration\\DiscountManagement.Configuration.csproj": {
               "projectPath": "H:\\ASP\\پروژه\\FirstShop_Project\\FirstShop_Project\\DiscountManagement.Configuration\\DiscountManagement.Configuration.csproj"
@@ -6542,5 +6648,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

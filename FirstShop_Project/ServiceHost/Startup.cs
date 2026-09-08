@@ -1,5 +1,6 @@
 using _0_Framework.Application;
 using BlogManagement.Configuration;
+using CommentManagement.Configuration;
 using DiscountManagement.Configuration;
 using InventoryManagement.Configuration;
 using Microsoft.AspNetCore.Builder;
@@ -31,7 +32,7 @@ namespace ServiceHost
             DiscountManagementBootstrapper.Configure(services, connectionString);
             InventoryManagementBootstrapper.Configure(services, connectionString);
             BlogManagementBootstrapper.Configure(services, connectionString);
-
+            CommentManagementBootstrapper.Configure(services, connectionString);    
 
 
             //For Encode for HTMl

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using _01_ShopQuery.Contracts.Comment;
+using System.Collections.Generic;
 
 namespace _01_ShopQuery.Contracts.Product
 {
