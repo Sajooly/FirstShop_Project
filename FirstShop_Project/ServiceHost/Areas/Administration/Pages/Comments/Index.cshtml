@@ -75,7 +75,7 @@
                                             {
                                                 <samp class="text-danger">کنسل شده</samp>
                                             }
-                                            else if(item.IsConfirmed)
+                                            else if (item.IsConfirmed)
                                             {
                                                 <samp class="text-success">تایید شده</samp>
                                             }
@@ -111,7 +111,8 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#datatable').dataTable();
+            $('#datatable').dataTable({
+        "order": [[0, "desc"]]
         });
     </script>
 }

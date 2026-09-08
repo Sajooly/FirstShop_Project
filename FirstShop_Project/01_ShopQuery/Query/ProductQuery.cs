@@ -82,16 +82,6 @@ namespace _01_ShopQuery.Query
                     Id = x.Id,
                     Name = x.Name,
                     Message = x.Message,
-                    Website = x.Website,
-                    ParentId = product.Id,
-                    Children = x.Children.Where(a => a.ParentId == x.Id).Select(c => new CommentQueryModel
-                    {
-                        Id = x.Id,
-                        Name = x.Name,
-                        Message = x.Message,
-                        Website = x.Website,
-                        ParentId = product.Id,
-                    }).ToList()
                 })
                 .OrderByDescending(c => c.Id)
                 .AsNoTracking()

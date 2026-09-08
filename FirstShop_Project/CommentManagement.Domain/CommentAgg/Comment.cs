@@ -16,6 +16,8 @@ namespace CommentManagement.Domain.CommentAgg
         public int OwnerRecordId { get; private set; }
         public int Type { get; private set; }
 
+
+        //For Self Relationship
         public int ParentId { get; private set; }
         public Comment Parent { get; private set; }
         public List<Comment> Children { get; private set; }

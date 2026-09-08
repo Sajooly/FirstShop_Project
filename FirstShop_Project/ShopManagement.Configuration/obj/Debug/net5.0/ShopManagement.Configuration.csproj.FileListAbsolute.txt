@@ -6,6 +6,9 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configurati
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Application.Contract.dll
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Domain.dll
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Application.Contracs.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Domain.dll
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.dll
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Application.Contract.dll
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Domain.dll
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.dll
@@ -24,6 +27,9 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configurati
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Application.Contract.pdb
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Domain.pdb
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Application.Contracs.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Domain.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.pdb
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Application.Contract.pdb
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Domain.pdb
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\DiscountManagement.Infrastructure.EFCore.pdb
@@ -41,9 +47,3 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configurati
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\obj\Debug\net5.0\refint\ShopManagement.Configuration.dll
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\obj\Debug\net5.0\ShopManagement.Configuration.pdb
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\obj\Debug\net5.0\ref\ShopManagement.Configuration.dll
-H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Application.Contracs.dll
-H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Domain.dll
-H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.dll
-H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Application.Contracs.pdb
-H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Domain.pdb
-H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ShopManagement.Configuration\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.pdb

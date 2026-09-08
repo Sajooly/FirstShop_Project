@@ -1,7 +1,9 @@
 ﻿using _0_Framework.Application;
 using _01_ShopQuery.Contracts.Article;
+using _01_ShopQuery.Contracts.Comment;
 using BlogManagement.Domain.ArticleCategoryAgg;
 using BlogManagement.Infrastructure.EFCore;
+using CommentManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,10 +14,12 @@ namespace _01_ShopQuery.Query
     public class ArticleQuery : IArticleQuery
     {
         private readonly BlogContext _blogContext;
+        private readonly CommentContext _commentContext;
 
-        public ArticleQuery(BlogContext blogContext)
+        public ArticleQuery(BlogContext blogContext, CommentContext commentContext)
         {
             _blogContext = blogContext;
+            _commentContext = commentContext;
         }
 
         public ArticleQueryModel GetArticleDetailsBy(string slug)
@@ -47,7 +51,33 @@ namespace _01_ShopQuery.Query
                 .AsNoTracking()
                 .FirstOrDefault(x => x.Slug == slug);
 
-                article.KeywordList = article.Keyword.Split(' ', ',').ToList();
+            article.KeywordList = article.Keyword.Split(' ', ',').ToList();
+
+
+
+            var Comments = _commentContext.Comments
+                 .Where(c => c.IsConfirmed && !c.IsCanceled)
+                 .Where(c => c.Type == CommentType.Article && c.OwnerRecordId == article.Id)
+                 .Select(x => new CommentQueryModel
+                 {
+                     Id = x.Id,
+                     Message = x.Message,
+                     Name = x.Name,
+                     CreationDate = x.CreationDate.ToFarsi(),
+
+                     ParentId = x.ParentId,
+
+                 })
+                 .OrderByDescending(x => x.Id)
+                 .AsNoTracking()
+                 .ToList();
+
+            Comments.ForEach(x => x.ParentName = (Comments.FirstOrDefault(c => c.Id == x.ParentId)?.Name));
+
+
+
+
+            article.Comments = Comments;
 
             return article;
         }
