@@ -1,0 +1,14 @@
+﻿using _0_Framework.Application;
+using System.Collections.Generic;
+
+namespace AccountManagement.Application.Contract.Account
+{
+    public interface IAccountApplication
+    {
+        OperationResult CreateAccount(CreateAccount commnad);
+        OperationResult EditAccount(EditAccount commnad);
+        OperationResult ChangePassword(ChangePassword command);
+        List<AccountViewModel> Search(AccountSearchModel searchModel);
+        EditAccount GetDetailsBy(int id);
+    }
+}
