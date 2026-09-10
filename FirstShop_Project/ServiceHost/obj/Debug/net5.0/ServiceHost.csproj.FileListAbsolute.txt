@@ -182,3 +182,7 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\AccountManagement.Domain.pdb
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Account\Create.cshtml.g.cs
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Account\Edit.cshtml.g.cs
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Account\Index.cshtml.g.cs
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Account\ChangePassword.cshtml.g.cs

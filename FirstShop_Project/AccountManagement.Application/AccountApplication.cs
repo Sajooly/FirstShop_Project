@@ -65,7 +65,7 @@ namespace AccountManagement.Application
             if (account == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            if (_accountRepository.Exists(a => a.UserName == commnad.UserName || a.Mobile == commnad.Mobile && a.Id != commnad.Id))
+            if (_accountRepository.Exists(a => (a.UserName == commnad.UserName || a.Mobile == commnad.Mobile) && a.Id != commnad.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
 
