@@ -33,17 +33,19 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
 
         public List<AccountViewModel> Search(AccountSearchModel searchModel)
         {
-            var query = _context.Accounts.Select(a => new AccountViewModel
-            {
-                Id = a.Id,
-                FullName = a.FullName,
-                UserName = a.UserName,
-                Mobile = a.Mobile,
-                ProfilePhoto = a.ProfilePhoto,
-                Role = "مدیر سیستم",
-                RoleId = 2,
-                CreationDate=a.CreationDate.ToFarsi()
-            });
+            var query = _context.Accounts
+                .Include(r => r.Role)
+                .Select(a => new AccountViewModel
+                {
+                    Id = a.Id,
+                    FullName = a.FullName,
+                    UserName = a.UserName,
+                    Mobile = a.Mobile,
+                    ProfilePhoto = a.ProfilePhoto,
+                    Role = a.Role.Name,
+                    RoleId = a.RoleId,
+                    CreationDate = a.CreationDate.ToFarsi()
+                });
 
             if (searchModel.RoleId > 0)
                 query = query.Where(x => x.RoleId == searchModel.RoleId);
