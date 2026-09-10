@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Domain;
+using AccountManagement.Domain.RoleAgg;
 
 namespace AccountManagement.Domain.AccountAgg
 {
@@ -10,6 +11,12 @@ namespace AccountManagement.Domain.AccountAgg
         public string Mobile { get; private set; }
         public int RoleId { get; private set; }
         public string ProfilePhoto { get; private set; }
+
+
+
+        //Navigation Property For Relationship
+        public Role Role{ get; private set; }
+
 
         public Account(string fullName, string userName, string password, string mobile, int roleId, string profilePhoto)
         {

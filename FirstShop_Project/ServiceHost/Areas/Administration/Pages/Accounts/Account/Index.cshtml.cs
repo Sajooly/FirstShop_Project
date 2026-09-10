@@ -1,4 +1,5 @@
 using AccountManagement.Application.Contract.Account;
+using AccountManagement.Application.Contract.Role;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,20 +15,28 @@ namespace ServiceHost.Areas.Administration.Pages.Accounts.Account
         public AccountSearchModel SearchModel;
         public List<AccountViewModel> Accounts;
         public SelectList Roles;
-        private readonly IAccountApplication _accountApplication;
 
-        public IndexModel(IAccountApplication accountApplication)
+        private readonly IAccountApplication _accountApplication;
+        private readonly IRoleApplication _roleApplication;
+
+        public IndexModel(IAccountApplication accountApplication, IRoleApplication roleApplication)
         {
             _accountApplication = accountApplication;
+            _roleApplication = roleApplication;
         }
 
         public void OnGet(AccountSearchModel searchModel)
         {
+            Roles = new SelectList(_roleApplication.Get(), "Id", "Name");
             Accounts = _accountApplication.Search(searchModel);
         }
         public IActionResult OnGetCreate()
         {
-            return Partial("Create");
+            var account = new CreateAccount()
+            {
+                Roles = _roleApplication.Get()
+            };
+            return Partial("Create", account);
         }
         public JsonResult OnPostCreate(CreateAccount command)
         {
@@ -37,6 +46,7 @@ namespace ServiceHost.Areas.Administration.Pages.Accounts.Account
         public IActionResult OnGetEdit(int id)
         {
             var account = _accountApplication.GetDetailsBy(id);
+            account.Roles = _roleApplication.Get();
             return Partial("Edit", account);
         }
         public JsonResult OnPostEdit(EditAccount command)

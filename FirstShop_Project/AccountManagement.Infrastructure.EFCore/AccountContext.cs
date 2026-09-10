@@ -1,4 +1,5 @@
 ﻿using AccountManagement.Domain.AccountAgg;
+using AccountManagement.Domain.RoleAgg;
 using AccountManagement.Infrastructure.EFCore.Mapping;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +8,7 @@ namespace AccountManagement.Infrastructure.EFCore
     public class AccountContext : DbContext
     {
         public DbSet<Account> Accounts { get; set; }
+        public DbSet<Role> Roles { get; set; }
         public AccountContext(DbContextOptions<AccountContext> options) : base(options)
         {
 
@@ -14,6 +16,7 @@ namespace AccountManagement.Infrastructure.EFCore
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new AccountMapping());
+            modelBuilder.ApplyConfiguration(new RoleMapping());
 
             //var assembly = typeof(AccountMapping).Assembly;
             //modelBuilder.ApplyConfigurationsFromAssembly(assembly);
