@@ -11,5 +11,6 @@ namespace _0_Framework.Domain
         List<T> GetAll();
         void SaveChanges();
         bool Exists(Expression<Func<T, bool>> expression);
+        T GetBy(Expression<Func<T, bool>> expression);
     }
 }

@@ -1,5 +1,6 @@
 ﻿@using _01_ShopQuery
 @model MenuModel
+@inject _0_Framework.Application.IAuthHelper authHelper
 @{
 }
 
@@ -51,6 +52,19 @@
                                 <li>
                                     <a asp-page="/Contact">تماس با ما</a>
                                 </li>
+
+                                @if (authHelper.IsAuthenticated())
+                                {
+                                    <li>
+                                        <a asp-page="/Account" asp-page-handler="LogOut">خروج</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li>
+                                        <a asp-page="/Account">ورود / ثبت نام</a>
+                                    </li>
+                                }
                             </ul>
                         </nav>
                     </div>

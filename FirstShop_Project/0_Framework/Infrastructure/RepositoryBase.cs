@@ -36,6 +36,11 @@ namespace _0_Framework.Infrastructure
             return _context.Find<T>(id);
         }
 
+        public T GetBy(Expression<Func<T, bool>> expression)
+        {
+            return _context.Set<T>().FirstOrDefault(expression);
+        }
+
         public void SaveChanges()
         {
             _context.SaveChanges();

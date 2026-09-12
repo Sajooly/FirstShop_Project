@@ -1,7 +1,8 @@
-﻿using AccountManagement.Application.Contract.Account;
-using System.Collections.Generic;
-using _0_Framework.Application;
+﻿using _0_Framework.Application;
+using AccountManagement.Application.Contract.Account;
 using AccountManagement.Domain.AccountAgg;
+using AccountManagement.Domain.RoleAgg;
+using System.Collections.Generic;
 
 namespace AccountManagement.Application
 {
@@ -10,12 +11,14 @@ namespace AccountManagement.Application
         private readonly IAccountRepository _accountRepository;
         private readonly IPasswordHasher _passwordHasher;
         private readonly IFileUploader _fileUploader;
+        private readonly IAuthHelper _authHelper;
 
-        public AccountApplication(IAccountRepository accountRepository, IPasswordHasher passwordHasher, IFileUploader fileUploader)
+        public AccountApplication(IAccountRepository accountRepository, IPasswordHasher passwordHasher, IFileUploader fileUploader, IAuthHelper authHelper)
         {
             _accountRepository = accountRepository;
             _passwordHasher = passwordHasher;
             _fileUploader = fileUploader;
+            _authHelper = authHelper;
         }
 
         public OperationResult ChangePassword(ChangePassword command)
@@ -79,6 +82,43 @@ namespace AccountManagement.Application
         public EditAccount GetDetailsBy(int id)
         {
             return _accountRepository.GetDetailsBy(id);
+        }
+
+        public OperationResult Login(LoginAccount command)
+        {
+            var operation = new OperationResult();
+
+            //این روش خودم بود ک شاید از نظر پرفورمنس بهتر باشه ولی از جهت های دیگه خوب نیس.برای فهمیدنش سرچ بزن متد لاگینی ک نوشتی رو ببین.
+            //var password = _passwordHasher.Hash(command.Password);
+            //if (!_accountRepository.Exists(x => x.UserName == command.UserName && x.Password == password))
+            //    operation.Failed(ApplicationMessages.UserNotExist);
+
+
+
+
+
+
+
+
+            //var account = _accountRepository.GetBy(command.UserName);
+            var _account = _accountRepository.GetBy(x => x.UserName == command.UserName);
+
+            if (_account == null)
+                operation.Failed(ApplicationMessages.UserNotExist);
+
+            var result = _passwordHasher.Check(_account.Password, command.Password);
+            if (!result.Verified)
+                operation.Failed(ApplicationMessages.UserNotExist);
+
+
+
+            _authHelper.SignIn(new AuthViewModel(_account.Id, _account.RoleId, _account.FullName, _account.UserName));
+            return operation.Succedded();
+        }
+
+        public void LogOut()
+        {
+            _authHelper.SignOut();
         }
 
         public List<AccountViewModel> Search(AccountSearchModel searchModel)
