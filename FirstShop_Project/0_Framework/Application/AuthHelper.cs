@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using _0_Framework.Infrastructure;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using System;
@@ -15,6 +16,30 @@ namespace _0_Framework.Application
         public AuthHelper(IHttpContextAccessor contextAccessor)
         {
             _contextAccessor = contextAccessor;
+        }
+
+        public AuthViewModel CurrentAccountInfo()
+        {
+            var claims = _contextAccessor.HttpContext.User.Claims.ToList();
+
+            var result = new AuthViewModel
+                (
+               int.Parse(claims.FirstOrDefault(x => x.Type == "AccountId").Value),
+               int.Parse(claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value),
+                claims.FirstOrDefault(x => x.Type == ClaimTypes.Name).Value,
+               claims.FirstOrDefault(x => x.Type == "UserName").Value
+                );
+
+            result.Role = Roles.GetRoleBy(result.RoleId);
+            return result;
+        }
+
+        public string CurrentAccountRole()
+        {
+            if (IsAuthenticated())
+                return _contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value;
+
+            return null;
         }
 
         public bool IsAuthenticated()

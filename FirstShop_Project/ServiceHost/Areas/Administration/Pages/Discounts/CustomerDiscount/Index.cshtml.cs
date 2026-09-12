@@ -1,4 +1,6 @@
+using _0_Framework.Infrastructure;
 using DiscountManagement.Application.Contract.CustomerDiscount;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -7,6 +9,7 @@ using System.Collections.Generic;
 
 namespace ServiceHost.Areas.Administration.Pages.Discounts.CustomerDiscount
 {
+    //[Authorize(Roles = Roles.Adminstration)]
     public class IndexModel : PageModel
     {
         [TempData]

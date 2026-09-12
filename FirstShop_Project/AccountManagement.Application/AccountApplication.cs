@@ -41,7 +41,7 @@ namespace AccountManagement.Application
             return operation.Succedded();
         }
 
-        public OperationResult CreateAccount(CreateAccount commnad)
+        public OperationResult RegisterAccount(RegisterAccount commnad)
         {
             var operation = new OperationResult();
 
@@ -104,11 +104,11 @@ namespace AccountManagement.Application
             var _account = _accountRepository.GetBy(x => x.UserName == command.UserName);
 
             if (_account == null)
-                operation.Failed(ApplicationMessages.UserNotExist);
+               return operation.Failed(ApplicationMessages.UserNotExist);
 
             var result = _passwordHasher.Check(_account.Password, command.Password);
             if (!result.Verified)
-                operation.Failed(ApplicationMessages.UserNotExist);
+               return operation.Failed(ApplicationMessages.UserNotExist);
 
 
 

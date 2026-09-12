@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 
 namespace ServiceHost.Areas.Administration.Pages.Shop.Products
 {
+    //[Authorize(Roles = "1,3")]
     public class IndexModel : PageModel
     {
         [TempData]

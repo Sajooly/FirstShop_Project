@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using _0_Framework.Infrastructure;
 using AccountManagement.Configuration;
 using BlogManagement.Configuration;
 using CommentManagement.Configuration;
@@ -69,7 +70,34 @@ namespace ServiceHost
             //End
 
 
-            services.AddRazorPages();
+            //Add Authorization , Policy
+
+            services.AddAuthorization(option =>
+            {
+                option.AddPolicy("AdminArea",
+                builder => builder.RequireRole(Roles.Adminstration, Roles.ContentUploader));
+
+                option.AddPolicy("Shop",
+              builder => builder.RequireRole(Roles.Adminstration));
+
+                option.AddPolicy("Discount",
+                    builder => builder.RequireRole(Roles.Adminstration));
+
+                option.AddPolicy("Account",
+                   builder => builder.RequireRole(Roles.Adminstration));
+            });
+
+            //End
+
+
+            services.AddRazorPages()
+                .AddRazorPagesOptions(option =>
+                {
+                    option.Conventions.AuthorizeAreaFolder("Administration", "/", "AdminArea");
+                    option.Conventions.AuthorizeAreaFolder("Administration", "/Shop", "Shop");
+                    option.Conventions.AuthorizeAreaFolder("Administration", "/Discounts", "Discount");
+                    option.Conventions.AuthorizeAreaFolder("Administration", "/Accounts", "Account");
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -92,7 +120,7 @@ namespace ServiceHost
 
             app.UseStaticFiles();
 
-            app.UseCookiePolicy(); 
+            app.UseCookiePolicy();
 
             app.UseRouting();
 

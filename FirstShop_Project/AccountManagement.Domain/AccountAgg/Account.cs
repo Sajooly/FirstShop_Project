@@ -15,7 +15,7 @@ namespace AccountManagement.Domain.AccountAgg
 
 
         //Navigation Property For Relationship
-        public Role Role{ get; private set; }
+        public Role Role { get; private set; }
 
 
         public Account(string fullName, string userName, string password, string mobile, int roleId, string profilePhoto)
@@ -25,6 +25,10 @@ namespace AccountManagement.Domain.AccountAgg
             Password = password;
             Mobile = mobile;
             RoleId = roleId;
+
+            if (roleId == 0)
+                RoleId = 2;
+
             ProfilePhoto = profilePhoto;
         }
         public void Edit(string fullName, string userName, string mobile, int roleId, string profilePhoto)

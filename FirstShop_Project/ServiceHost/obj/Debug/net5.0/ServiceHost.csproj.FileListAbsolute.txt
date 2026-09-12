@@ -190,3 +190,4 @@ H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Role\Edit.cshtml.g.cs
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Accounts\Role\Index.cshtml.g.cs
 H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Pages\Account.cshtml.g.cs
+H:\ASP\پروژه\FirstShop_Project\FirstShop_Project\ServiceHost\obj\Debug\net5.0\Razor\Pages\AccessDenied.cshtml.g.cs

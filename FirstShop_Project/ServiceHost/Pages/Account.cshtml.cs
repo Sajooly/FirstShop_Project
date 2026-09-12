@@ -7,7 +7,10 @@ namespace ServiceHost.Pages
     public class AccountModel : PageModel
     {
         [TempData]
-        public string Message { get; set; }
+        public string LoginMessage { get; set; }
+
+        [TempData]
+        public string RegisterMessage { get; set; }
 
 
         private readonly IAccountApplication _accountApplication;
@@ -27,14 +30,26 @@ namespace ServiceHost.Pages
                 return RedirectToPage("/Index");
 
 
-            Message = result.Message;
-            return RedirectToPage("Account");
+            LoginMessage = result.Message;
+            return RedirectToPage("AccessDenied");
         }
 
         public IActionResult OnGetLogOut()
         {
             _accountApplication.LogOut();
             return RedirectToPage("/Index");
+        }
+
+        public IActionResult OnPostRegister(RegisterAccount command)
+        {
+
+            var result = _accountApplication.RegisterAccount(command);
+
+            if (result.IsSuccedded)
+                return RedirectToPage("/Account");
+
+            RegisterMessage = result.Message;
+            return RedirectToPage("/Account");
         }
     }
 }
