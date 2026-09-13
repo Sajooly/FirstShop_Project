@@ -31,7 +31,7 @@ namespace ServiceHost.Pages
 
 
             LoginMessage = result.Message;
-            return RedirectToPage("AccessDenied");
+            return Page();
         }
 
         public IActionResult OnGetLogOut()
@@ -49,7 +49,7 @@ namespace ServiceHost.Pages
                 return RedirectToPage("/Account");
 
             RegisterMessage = result.Message;
-            return RedirectToPage("/Account");
+            return Page();
         }
     }
 }

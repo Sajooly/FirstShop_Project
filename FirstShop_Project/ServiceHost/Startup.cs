@@ -70,7 +70,7 @@ namespace ServiceHost
             //End
 
 
-            //Add Authorization , Policy
+            //Add Policy For Authorization By Role-Based 
 
             services.AddAuthorization(option =>
             {

@@ -11,19 +11,23 @@ namespace AccountManagement.Domain.RoleAgg
 
         //Navigation Property For Relationship
         public List<Account> Accounts { get; private set; }
+        public List<Permission> Permissions { get; private set; }
 
         protected Role()
         {
             Accounts = new List<Account>();
+            Permissions = new List<Permission>();
         }
 
-        public Role(string name)
+        public Role(string name, List<Permission> permissions)
         {
             Name = name;
+            Permissions = permissions;
         }
-        public void Edit(string name)
+        public void Edit(string name, List<Permission> permissions)
         {
             Name = name;
+            Permissions = permissions;
         }
     }
 }

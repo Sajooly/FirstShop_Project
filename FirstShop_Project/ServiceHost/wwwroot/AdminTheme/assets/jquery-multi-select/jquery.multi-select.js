@@ -135,7 +135,7 @@
 
       if ($optgroup.length > 0){
         var optgroupLabel = $optgroup.attr('label'),
-            optgroupId = that.sanitize(optgroupLabel, that.sanitizeRegexp),
+            optgroupId = that.sanitize(optgroupLabel, that.sanitizeRegexp) + '-' + $optgroup.index(),
             $selectableOptgroup = that.$selectableUl.find('#optgroup-selectable-'+optgroupId),
             $selectionOptgroup = that.$selectionUl.find('#optgroup-selection-'+optgroupId);
         
