@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,9 @@ namespace _0_Framework.Application
                int.Parse(claims.FirstOrDefault(x => x.Type == "AccountId").Value),
                int.Parse(claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value),
                 claims.FirstOrDefault(x => x.Type == ClaimTypes.Name).Value,
-               claims.FirstOrDefault(x => x.Type == "UserName").Value
+               claims.FirstOrDefault(x => x.Type == "UserName").Value,
+               new List<int>()
+
                 );
 
             result.Role = Roles.GetRoleBy(result.RoleId);
@@ -42,21 +45,33 @@ namespace _0_Framework.Application
             return null;
         }
 
+        public List<int> GetPermissions()
+        {
+            if (!IsAuthenticated())
+                return new List<int>();
+
+            var permissions = _contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == "permissions")?.Value;
+            return JsonConvert.DeserializeObject<List<int>>(permissions);
+        }
+
         public bool IsAuthenticated()
         {
-            var claim = _contextAccessor.HttpContext.User.Claims.ToList();
+            return _contextAccessor.HttpContext.User.Identity.IsAuthenticated;
 
-            return claim.Count > 0;
+            //var claim = _contextAccessor.HttpContext.User.Claims.ToList();
+            //return claim.Count > 0;
         }
 
         public void SignIn(AuthViewModel account)
         {
+            var permissions = JsonConvert.SerializeObject(account.Permissions);
             var claim = new List<Claim>
             {
                 new Claim("AccountId",account.Id.ToString()),
                 new Claim(ClaimTypes.Name,account.FullName),
                 new Claim(ClaimTypes.Role,account.RoleId.ToString()),
                 new Claim("UserName",account.UserName),
+                new Claim("permissions",permissions)
             };
 
 
