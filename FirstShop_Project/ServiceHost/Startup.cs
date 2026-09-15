@@ -1,5 +1,7 @@
 ﻿using _0_Framework.Application;
 using _0_Framework.Infrastructure;
+using _01_ShopQuery.Contracts;
+using _01_ShopQuery.Query;
 using AccountManagement.Configuration;
 using BlogManagement.Configuration;
 using CommentManagement.Configuration;
@@ -43,6 +45,8 @@ namespace ServiceHost
             BlogManagementBootstrapper.Configure(services, connectionString);
             CommentManagementBootstrapper.Configure(services, connectionString);
             AccountManagementBootstrapper.Configure(services, connectionString);
+
+
 
             //For Encode for HTMl
             services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Arabic));

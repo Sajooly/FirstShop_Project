@@ -5,6 +5,7 @@ using CommentManagement.Infrastructure.EFCore;
 using DiscountManagement.Infrastructure.EFCore;
 using InventoryManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
+using ShopManagement.Application.Contracts.Order;
 using ShopManagement.Infrastructure.EFCore;
 using System;
 using System.Collections.Generic;
@@ -207,6 +208,20 @@ namespace _01_ShopQuery.Query
             });
 
             return products;
+        }
+
+        public List<CartItem> ChechInventoryStatus(List<CartItem> items)
+        {
+            var inventory = _inventoryContext.Inventory.ToList();
+
+
+            foreach (var cartitem in items)
+            {
+                var inventoryItem = inventory.FirstOrDefault(x => x.ProductId == cartitem.Id);
+                cartitem.IsInStock = inventoryItem.CalculateInStock() >= cartitem.Count;
+            }
+
+            return items;
         }
     }
 }

@@ -23,7 +23,7 @@ namespace DiscountManagement.Infrastructure.EFCore.Repository
         {
             return _context.ColleagueDiscounts.Select(x => new EditColleagueDiscount
             {
-                Id = id,
+                Id = x.Id,
                 DiscountRate = x.DiscountRate,
                 ProductId = x.ProductId,
 
