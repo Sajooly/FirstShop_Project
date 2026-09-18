@@ -19,6 +19,13 @@ namespace _0_Framework.Application
             _contextAccessor = contextAccessor;
         }
 
+        public int CurrentAccountId()
+        {
+            if (IsAuthenticated())
+                return int.Parse(_contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == "AccountId").Value);
+            return 0;
+        }
+
         public AuthViewModel CurrentAccountInfo()
         {
             var claims = _contextAccessor.HttpContext.User.Claims.ToList();

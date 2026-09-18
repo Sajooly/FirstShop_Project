@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using _0_Framework.Application.ZarinPal;
 using _0_Framework.Infrastructure;
 using _01_ShopQuery.Contracts;
 using _01_ShopQuery.Query;
@@ -57,10 +58,12 @@ namespace ServiceHost
             services.AddTransient<IAuthHelper, AuthHelper>();
 
 
+            services.AddTransient<IZarinPalFactory, ZarinPalFactory>();
+
             //Authentication
             services.Configure<CookiePolicyOptions>(options =>
             {
-                options.CheckConsentNeeded = context => true;
+                options.CheckConsentNeeded = context => false;
                 options.MinimumSameSitePolicy = SameSiteMode.Lax;
             });
 

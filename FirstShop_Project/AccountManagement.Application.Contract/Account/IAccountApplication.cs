@@ -12,5 +12,6 @@ namespace AccountManagement.Application.Contract.Account
         EditAccount GetDetailsBy(int id);
         OperationResult Login(LoginAccount command);
         void LogOut();
+        List<AccountViewModel> GetAccounts();
     }
 }

@@ -38,6 +38,11 @@
                         <a asp-page="/Inventory/Index" class="waves-effect"><i class="md md-home"></i><span>انبارداری</span></a>
                     </li>
                 }
+
+                <li>
+                    <a asp-page="/Shop/Orders/Index" class="waves-effect"><i class="md md-home"></i><span>سفارشات</span></a>
+                </li>
+
                 @if (authHelper.CurrentAccountRole() == Roles.Adminstration)
                 {
                     <li class="has_sub">

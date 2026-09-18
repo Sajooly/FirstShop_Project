@@ -8,10 +8,12 @@ namespace InventoryManagement.Application
     public class InventoryApplication : IInventoryApplication
     {
         private readonly IInventoryRepository _inventoryRepository;
+        private readonly IAuthHelper _authHelper;
 
-        public InventoryApplication(IInventoryRepository inventoryRepository)
+        public InventoryApplication(IInventoryRepository inventoryRepository, IAuthHelper authHelper)
         {
             _inventoryRepository = inventoryRepository;
+            _authHelper = authHelper;
         }
 
         public OperationResult CreateInventory(CreateInventory command)
@@ -29,7 +31,7 @@ namespace InventoryManagement.Application
         public OperationResult Decrease(List<DecreaseInventory> command)
         {
             var operation = new OperationResult();
-            const int operatorId = 1;
+            var operatorId = _authHelper.CurrentAccountId();
 
             foreach (var item in command)
             {
@@ -50,7 +52,7 @@ namespace InventoryManagement.Application
             if (inventory == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            const int operatorId = 1; //چون اینجا هنوز سیستم مدیریت کاربران نساختیم این رو اینجا مینویسیم و بعدش ک سیستم  اکانتینگ رو ساختیم این رو درست میکنیم.
+            var operatorId = _authHelper.CurrentAccountId();
             inventory.Reduction(command.Count, operatorId, command.Description, 0);
             _inventoryRepository.SaveChanges();
             return operation.Succedded();
@@ -85,13 +87,13 @@ namespace InventoryManagement.Application
         public OperationResult Increase(IncreaseInventory command)
         {
             var operation = new OperationResult();
+            var operatorId = _authHelper.CurrentAccountId();
 
             var inventory = _inventoryRepository.GetBy(command.InventoryId);
 
             if (inventory == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            const int operatorId = 1; //چون اینجا هنوز سیستم مدیریت کاربران نساختیم این رو اینجا مینویسیم و بعدش ک سیستم  اکانتینگ رو ساختیم این رو درست میکنیم.
             inventory.Increase(command.Count, operatorId, command.Description);
             _inventoryRepository.SaveChanges();
             return operation.Succedded();
