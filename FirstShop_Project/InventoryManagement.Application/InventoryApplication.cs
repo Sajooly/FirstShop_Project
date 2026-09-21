@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using _0_Framework.Application;
 using InventoryManagement.Domain.InventoryAgg;
+using Microsoft.AspNetCore.Mvc;
 
 namespace InventoryManagement.Application
 {
@@ -14,6 +15,18 @@ namespace InventoryManagement.Application
         {
             _inventoryRepository = inventoryRepository;
             _authHelper = authHelper;
+        }
+
+        public bool CheckInStock(int productId)
+        {
+            var inventory = _inventoryRepository.GetInventoryBy(productId);
+
+            if (inventory == null)
+                return false;
+
+            if (inventory.InStock)
+                return true;
+            return false;
         }
 
         public OperationResult CreateInventory(CreateInventory command)

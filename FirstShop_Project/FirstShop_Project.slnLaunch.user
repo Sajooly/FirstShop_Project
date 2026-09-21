@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "ServiceHost\\ServiceHost.csproj",
+        "Action": "Start",
+        "DebugTarget": "ServiceHost"
+      },
+      {
+        "Path": "BlogManagement.Presentation.Api\\BlogManagement.Presentation.Api.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -14,5 +14,7 @@ namespace InventoryManagement.Application.Contract.Inventory
         OperationResult Decrease(List<DecreaseInventory> command);
         OperationResult Decrease(DecreaseInventory command);
         List<InventoryOperationViewModel> GetOperationLogBy(int inventoryId);
+
+        bool CheckInStock(int productId);
     }
 }

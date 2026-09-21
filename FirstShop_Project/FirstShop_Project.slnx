@@ -23,6 +23,9 @@
     <Project Path="BlogManagement.Configuration/BlogManagement.Configuration.csproj" Id="cd265ba8-fecf-4063-92a1-0be1394b75c0" />
     <Project Path="BlogManagement.Infrastructure.EFCore/BlogManagement.Infrastructure.EFCore.csproj" Id="9cae61ec-6781-4234-9e76-c4354be6785b" />
   </Folder>
+  <Folder Name="/BlogManagement/BM.Presentation/">
+    <Project Path="BlogManagement.Presentation.Api/BlogManagement.Presentation.Api.csproj" Id="862af68d-1c88-4790-9259-eec58f631a32" />
+  </Folder>
   <Folder Name="/CommentManagement/" />
   <Folder Name="/CommentManagement/CM.Application/">
     <Project Path="CommentManagement.Application.Contracs/CommentManagement.Application.Contracs.csproj" Id="460c3128-c448-4375-bf24-f9c2376d72ad" />
@@ -59,6 +62,9 @@
     <Project Path="InventoryManagement.Configuration/InventoryManagement.Configuration.csproj" Id="7169645c-c43e-4544-ba40-c79231d83a01" />
     <Project Path="InventoryManagement.Infrastructure.EFCore/InventoryManagement.Infrastructure.EFCore.csproj" Id="cb63a9da-6a20-4ed4-a81e-8f6b7fe48f79" />
   </Folder>
+  <Folder Name="/InventoryManagement/IM.Presentation/">
+    <Project Path="InventoryManagement.Presentation.Api/InventoryManagement.Presentation.Api.csproj" Id="5747e57d-a620-4fcf-96bf-4e0e5b72ada3" />
+  </Folder>
   <Folder Name="/ShopManagement/" />
   <Folder Name="/ShopManagement/SM.Application/">
     <Project Path="ShopManagement.Application.Contracts/ShopManagement.Application.Contracts.csproj" />
@@ -71,6 +77,9 @@
     <Project Path="ShopManagement.Configuration/ShopManagement.Configuration.csproj" Id="1ee81811-20c5-4a65-bd2b-56f6b461e025" />
     <Project Path="ShopManagement.Infrastructure.EFCore/ShopManagement.Infrastructure.EFCore.csproj" Id="58fca83b-deba-4eb4-8ddc-29a5f8f55d3c" />
     <Project Path="ShopManagement.Infrastructure.InventoryAcl/ShopManagement.Infrastructure.InventoryAcl.csproj" Id="de2b7dcc-37a7-4676-a9cd-5a63dc22c867" />
+  </Folder>
+  <Folder Name="/ShopManagement/SM.Presentation/">
+    <Project Path="ShopManagement.Presentation.Api/ShopManagement.Presentation.Api.csproj" Id="7f432bf5-2615-4420-9749-563bf4121cae" />
   </Folder>
   <Project Path="01_ShopQuery/01_ShopQuery.csproj" Id="4bf4472f-9fe2-40c9-ad3f-4a79d72e9620" />
   <Project Path="0_Framework/0_Framework.csproj" />
