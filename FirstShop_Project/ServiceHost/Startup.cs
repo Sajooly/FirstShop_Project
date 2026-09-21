@@ -99,6 +99,15 @@ namespace ServiceHost
             //End
 
 
+            //CORS
+            services.AddCors(option =>
+            option.AddPolicy("MyPolicy", policy =>
+            policy.WithOrigins("https://sajad.com")
+            ));
+            //End
+
+
+
             services.AddRazorPages()
                 .AddMvcOptions(options => options.Filters.Add<SecurityPageFilter>())
                 .AddRazorPagesOptions(option =>
@@ -137,6 +146,9 @@ namespace ServiceHost
             app.UseRouting();
 
             app.UseAuthorization();
+
+            //Use CORS
+            app.UseCors("MyPolicy");
 
             app.UseEndpoints(endpoints =>
             {
